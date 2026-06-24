@@ -96,7 +96,7 @@ p { color: var(--text-muted); }
   color: var(--navy);
   border: 1.5px solid var(--navy-light);
 }
-.btn-outline:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy-light); color: #fff; border-color: var(--navy-light); }
 
 .btn-ghost {
   background: transparent;
