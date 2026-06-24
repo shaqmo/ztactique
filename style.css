@@ -133,14 +133,17 @@ p { color: var(--text-muted); }
   color: var(--navy);
 }
 
-.nav-logo img {
+.logo-icon {
   height: 40px;
-  width: auto;
+  width: 40px;
+  object-fit: cover;
+  object-position: left center;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .footer-logo {
-  filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -442,7 +445,9 @@ p { color: var(--text-muted); }
   flex-wrap: wrap;
 }
 
+.nav-logo span { color: var(--navy-light); }
 .footer .nav-logo { color: #fff; }
+.footer .nav-logo span { color: #76ABAE; }
 
 .footer-copy {
   font-size: 0.8rem;
