@@ -146,7 +146,7 @@ p { color: var(--text-muted); }
   text-decoration: none;
   transition: color var(--transition);
 }
-.nav-links a:hover { color: var(--navy); }
+.nav-links a:not(.btn):hover { color: var(--navy); }
 
 .nav-toggle {
   display: none;
