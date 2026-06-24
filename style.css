@@ -135,15 +135,12 @@ p { color: var(--text-muted); }
 
 .logo-icon {
   height: 40px;
-  width: 40px;
-  object-fit: cover;
-  object-position: left center;
+  width: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .footer-logo {
-  mix-blend-mode: screen;
+  filter: brightness(0) invert(1);
 }
 
 .nav-links {
