@@ -393,6 +393,30 @@ p { color: var(--text-muted); }
 
 .contact-form .btn { align-self: flex-start; }
 
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 36px;
+  box-shadow: var(--shadow);
+  gap: 12px;
+}
+
+.form-success svg {
+  width: 48px;
+  height: 48px;
+  color: var(--navy-light);
+  margin-bottom: 8px;
+}
+
+.form-success h3 { color: var(--text); }
+.form-success p { font-size: 0.95rem; }
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--text);

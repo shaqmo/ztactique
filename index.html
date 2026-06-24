@@ -139,10 +139,9 @@
           </a>
         </div>
       </div>
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="a8c9f845-d983-4963-a355-919d87147a59" />
         <input type="hidden" name="subject" value="New enquiry from ztactique.com" />
-        <input type="hidden" name="redirect" value="https://ztactique.com" />
         <div class="form-row">
           <div class="form-group">
             <label for="name">Full Name</label>
@@ -161,8 +160,13 @@
           <label for="message">How can we help?</label>
           <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or challenge..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
       </form>
+      <div class="form-success" id="form-success" style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. We'll get back to you within one business day.</p>
+      </div>
     </div>
   </section>
 
