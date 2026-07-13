@@ -44,6 +44,6 @@ form.addEventListener('submit', async (e) => {
   } catch {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Send Message';
-    alert('Something went wrong. Please try again or email us directly at shakeel@ztactique.com');
+    alert('Something went wrong. Please try again or email us directly at support@ztactique.com');
   }
 });
