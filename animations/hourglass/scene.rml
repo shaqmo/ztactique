@@ -1,0 +1,121 @@
+<Rive version="1" kind="fragment">
+    <Artboard width="64" height="64" name="Hourglass" defaultStateMachineId="1:2" id="1:1">
+
+        <!-- Sand in the upper chamber: shrinks toward the neck -->
+        <Node x="32" y="27" name="Top Sand" id="1:10">
+            <Shape x="0" y="0" name="Path" id="1:11">
+                <PointsPath isClosed="true" name="Triangle">
+                    <StraightVertex x="-8" y="-11" radius="1.5"/>
+                    <StraightVertex x="8" y="-11" radius="1.5"/>
+                    <StraightVertex x="0" y="0" radius="1.5"/>
+                </PointsPath>
+                <Stroke thickness="2.6" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FFFF5722" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <!-- Falling stream: draws in, then draws out -->
+        <Shape x="32" y="31" name="Stream" id="1:12">
+            <PointsPath isClosed="false" name="Line">
+                <StraightVertex x="0" y="0"/>
+                <StraightVertex x="0" y="19"/>
+            </PointsPath>
+            <Stroke thickness="2.6" cap="round" join="round" name="Stroke">
+                <SolidColor colorValue="FFFF5722" name="Color"/>
+                <TrimPath start="0" end="0" name="Trim" id="1:13"/>
+            </Stroke>
+        </Shape>
+
+        <!-- Pile in the lower chamber: grows from the base -->
+        <Node x="32" y="51" name="Pile" id="1:14" scaleX="0" scaleY="0">
+            <Shape x="0" y="0" name="Path" id="1:15">
+                <PointsPath isClosed="true" name="Triangle">
+                    <StraightVertex x="-10" y="0" radius="1.5"/>
+                    <StraightVertex x="10" y="0" radius="1.5"/>
+                    <StraightVertex x="0" y="-10" radius="1.5"/>
+                </PointsPath>
+                <Stroke thickness="2.6" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FFFF5722" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <!-- Glass outline -->
+        <Shape x="0" y="0" name="Glass" id="1:16">
+            <PointsPath isClosed="true" name="Body">
+                <StraightVertex x="20" y="10"/>
+                <StraightVertex x="44" y="10"/>
+                <StraightVertex x="44" y="20" radius="2"/>
+                <StraightVertex x="34" y="32" radius="2"/>
+                <StraightVertex x="44" y="44" radius="2"/>
+                <StraightVertex x="44" y="54"/>
+                <StraightVertex x="20" y="54"/>
+                <StraightVertex x="20" y="44" radius="2"/>
+                <StraightVertex x="30" y="32" radius="2"/>
+                <StraightVertex x="20" y="20" radius="2"/>
+            </PointsPath>
+            <Stroke thickness="3.4" cap="round" join="round" name="Stroke">
+                <SolidColor colorValue="FF76ABAE" name="Color"/>
+            </Stroke>
+        </Shape>
+
+        <!-- Top and bottom caps -->
+        <Shape x="0" y="0" name="Caps" id="1:17">
+            <PointsPath isClosed="false" name="Top">
+                <StraightVertex x="15" y="10"/>
+                <StraightVertex x="49" y="10"/>
+            </PointsPath>
+            <PointsPath isClosed="false" name="Bottom">
+                <StraightVertex x="15" y="54"/>
+                <StraightVertex x="49" y="54"/>
+            </PointsPath>
+            <Stroke thickness="3.4" cap="round" join="round" name="Stroke">
+                <SolidColor colorValue="FF76ABAE" name="Color"/>
+            </Stroke>
+        </Shape>
+
+        <StateMachine name="Play Once" id="1:2">
+            <StateMachineLayer name="Layer 1" id="1:3">
+                <AnyState x="80" y="-40"/>
+                <ExitState x="240" y="-40"/>
+                <EntryState><StateTransition stateToId="1:5"/></EntryState>
+                <AnimationState x="80" y="40" animationId="1:4" id="1:5"/>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation loopValue="oneShot" duration="150" name="Fall" id="1:4">
+            <KeyedObject objectId="1:10">
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble value="1" frame="8" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="130" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="1" frame="8" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="130" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="1:13">
+                <KeyedProperty propertyKey="115">
+                    <KeyFrameDouble value="0" frame="4" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="18" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="114">
+                    <KeyFrameDouble value="0" frame="122" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="138" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="1:14">
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble value="0" frame="12" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="138" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="0" frame="12" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="138" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+</Rive>
