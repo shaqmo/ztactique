@@ -1,0 +1,247 @@
+<Rive version="1" kind="fragment">
+
+    <!-- ============================================================ -->
+    <!-- ICON 1 — IT Strategy & Consulting (pages fan open on hover)   -->
+    <!-- ============================================================ -->
+    <Artboard width="64" height="64" name="IT Strategy" defaultStateMachineId="10:2" id="10:1">
+
+        <Node x="32" y="44" rotation="0" name="Left Page" id="10:10">
+            <Shape x="0" y="0" name="Page" id="10:11">
+                <PointsPath isClosed="false" name="Line">
+                    <StraightVertex x="0" y="0" radius="2"/>
+                    <StraightVertex x="-18" y="-26"/>
+                </PointsPath>
+                <Stroke thickness="3.6" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FF76ABAE" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <Node x="32" y="44" rotation="0" name="Right Page" id="10:12">
+            <Shape x="0" y="0" name="Page" id="10:13">
+                <PointsPath isClosed="false" name="Line">
+                    <StraightVertex x="0" y="0" radius="2"/>
+                    <StraightVertex x="18" y="-26"/>
+                </PointsPath>
+                <Stroke thickness="3.6" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FF76ABAE" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <Shape x="32" y="44" name="Hinge" id="10:14">
+            <Ellipse width="6" height="6" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill"><SolidColor colorValue="FFFF5722" name="Color"/></Fill>
+        </Shape>
+
+        <StateMachine name="Hover SM" id="10:2">
+            <StateMachineBool name="Hovered" id="10:30"/>
+            <StateMachineLayer name="Layer 1" id="10:3">
+                <AnyState x="80" y="-40"/>
+                <ExitState x="240" y="-40"/>
+                <EntryState><StateTransition stateToId="10:20"/></EntryState>
+
+                <AnimationState x="80" y="40" animationId="10:40" id="10:20">
+                    <StateTransition stateToId="10:21" duration="180">
+                        <TransitionBoolCondition inputId="10:30" opValue="equal"/>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState x="80" y="140" animationId="10:41" id="10:21">
+                    <StateTransition stateToId="10:20" duration="220">
+                        <TransitionBoolCondition inputId="10:30" opValue="notEqual"/>
+                    </StateTransition>
+                </AnimationState>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation duration="1" name="Rest" id="10:40"/>
+
+        <LinearAnimation loopValue="loop" duration="50" name="Fan Open" id="10:41">
+            <KeyedObject objectId="10:10">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-0.22" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-0.1" frame="50" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="10:12">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.22" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.1" frame="50" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+
+    <!-- ============================================================ -->
+    <!-- ICON 2 — Cloud & Infrastructure (bars load on hover)          -->
+    <!-- ============================================================ -->
+    <Artboard x="100" width="64" height="64" name="Cloud Infrastructure" defaultStateMachineId="20:2" id="20:1">
+
+        <Shape x="32" y="27" name="Screen" id="20:10">
+            <Rectangle width="42" height="30" originX="0.5" originY="0.5" cornerRadiusTL="4" cornerRadiusTR="4" cornerRadiusBL="4" cornerRadiusBR="4" name="Path"/>
+            <Stroke thickness="3.4" cap="round" join="round" name="Stroke">
+                <SolidColor colorValue="FF76ABAE" name="Color"/>
+            </Stroke>
+        </Shape>
+
+        <Shape x="24" y="48" name="Stand" id="20:11">
+            <Rectangle width="16" height="2.6" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill"><SolidColor colorValue="FF76ABAE" name="Color"/></Fill>
+        </Shape>
+        <Shape x="32" y="42" name="Neck" id="20:12">
+            <Rectangle width="2.6" height="10" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill"><SolidColor colorValue="FF76ABAE" name="Color"/></Fill>
+        </Shape>
+
+        <Node x="14" y="21" name="Bar 1" id="20:13">
+            <Shape x="0" y="0" name="Path" id="20:14">
+                <Rectangle width="24" height="3.4" originX="0" originY="0.5" cornerRadiusTL="1.7" cornerRadiusTR="1.7" cornerRadiusBL="1.7" cornerRadiusBR="1.7" name="Rect"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFF5722" name="Color"/></Fill>
+            </Shape>
+        </Node>
+
+        <Node x="14" y="30" name="Bar 2" id="20:15">
+            <Shape x="0" y="0" name="Path" id="20:16">
+                <Rectangle width="16" height="3.4" originX="0" originY="0.5" cornerRadiusTL="1.7" cornerRadiusTR="1.7" cornerRadiusBL="1.7" cornerRadiusBR="1.7" name="Rect"/>
+                <Fill name="Fill"><SolidColor colorValue="FF76ABAE" name="Color"/></Fill>
+            </Shape>
+        </Node>
+
+        <StateMachine name="Hover SM" id="20:2">
+            <StateMachineBool name="Hovered" id="20:30"/>
+            <StateMachineLayer name="Layer 1" id="20:3">
+                <AnyState x="80" y="-40"/>
+                <ExitState x="240" y="-40"/>
+                <EntryState><StateTransition stateToId="20:20"/></EntryState>
+
+                <AnimationState x="80" y="40" animationId="20:40" id="20:20">
+                    <StateTransition stateToId="20:21" duration="150">
+                        <TransitionBoolCondition inputId="20:30" opValue="equal"/>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState x="80" y="140" animationId="20:41" id="20:21">
+                    <StateTransition stateToId="20:20" duration="220">
+                        <TransitionBoolCondition inputId="20:30" opValue="notEqual"/>
+                    </StateTransition>
+                </AnimationState>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation duration="1" name="Rest" id="20:40"/>
+
+        <LinearAnimation loopValue="loop" duration="70" name="Data Load" id="20:41">
+            <KeyedObject objectId="20:13">
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.4" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="45" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="20:15">
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.35" frame="40" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="65" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+
+    <!-- ============================================================ -->
+    <!-- ICON 3 — Software Development (brackets slide apart on hover)-->
+    <!-- ============================================================ -->
+    <Artboard x="200" width="64" height="64" name="Software Development" defaultStateMachineId="30:2" id="30:1">
+
+        <Node x="0" y="0" name="Left Bracket" id="30:10">
+            <Shape x="0" y="0" name="Path" id="30:11">
+                <PointsPath isClosed="false" name="Chevron">
+                    <StraightVertex x="27" y="16" radius="2"/>
+                    <StraightVertex x="16" y="27" radius="2"/>
+                    <StraightVertex x="27" y="38" radius="2"/>
+                </PointsPath>
+                <Stroke thickness="4" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FF76ABAE" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <Node x="0" y="0" name="Right Bracket" id="30:12">
+            <Shape x="0" y="0" name="Path" id="30:13">
+                <PointsPath isClosed="false" name="Chevron">
+                    <StraightVertex x="37" y="16" radius="2"/>
+                    <StraightVertex x="48" y="27" radius="2"/>
+                    <StraightVertex x="37" y="38" radius="2"/>
+                </PointsPath>
+                <Stroke thickness="4" cap="round" join="round" name="Stroke">
+                    <SolidColor colorValue="FF76ABAE" name="Color"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <Shape x="32" y="27" name="Cursor" id="30:14">
+            <Rectangle width="2.6" height="16" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill"><SolidColor colorValue="FFFF5722" name="Color"/></Fill>
+        </Shape>
+
+        <StateMachine name="Hover SM" id="30:2">
+            <StateMachineBool name="Hovered" id="30:30"/>
+            <StateMachineLayer name="Layer 1" id="30:3">
+                <AnyState x="80" y="-40"/>
+                <ExitState x="240" y="-40"/>
+                <EntryState><StateTransition stateToId="30:20"/></EntryState>
+
+                <AnimationState x="80" y="40" animationId="30:40" id="30:20">
+                    <StateTransition stateToId="30:21" duration="140">
+                        <TransitionBoolCondition inputId="30:30" opValue="equal"/>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState x="80" y="140" animationId="30:41" id="30:21">
+                    <StateTransition stateToId="30:20" duration="200">
+                        <TransitionBoolCondition inputId="30:30" opValue="notEqual"/>
+                    </StateTransition>
+                </AnimationState>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation duration="1" name="Rest" id="30:40">
+            <KeyedObject objectId="30:14">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="hold"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+        <LinearAnimation loopValue="loop" duration="60" name="Compile" id="30:41">
+            <KeyedObject objectId="30:10">
+                <KeyedProperty propertyKey="13">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-4" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0" frame="45" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="30:12">
+                <KeyedProperty propertyKey="13">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="4" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0" frame="45" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="30:14">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="15" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="35" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="50" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="60" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+
+</Rive>

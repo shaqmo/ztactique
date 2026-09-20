@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Real Cost When a Migration Vendor Disappears: ZTactique</title>
+  <meta name="description" content="What actually breaks when a migration partner disappears mid-project, and the three checkpoints that catch it early." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="btn btn-outline">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/insights/">Insights</a><span>/</span>Migrations</div>
+      <h1>The Real Cost When a Migration Vendor Disappears</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container article-body">
+      <div class="article-meta">
+        <span>Migrations</span> · <span>6 min read</span>
+      </div>
+
+      <p>The pattern is almost always the same. A migration begins with a confident timeline, a signed statement of work, and a vendor who answers emails within the hour. Six weeks in, the responses slow down. Then a project lead "transitions to a new role." Then all communication stops entirely, usually right after the hardest and riskiest phase of the cutover has started but before it is finished.</p>
+
+      <p>What is left behind is not simply an unfinished project. It is a specific, predictable set of problems that grow worse the longer they go unaddressed.</p>
+
+      <h2>What Actually Breaks</h2>
+      <p>In the engagements where we have been brought in to clean up after a vendor disappeared, the damage almost never looks like "nothing happened." It tends to look like this:</p>
+      <ul>
+        <li><strong>Half-migrated data.</strong> Some tables, buckets, or services have moved, others have not, and nobody has a clear list of which is which.</li>
+        <li><strong>Two production environments running at once</strong>, quietly drifting out of sync, each one treated as the source of truth by a different team.</li>
+        <li><strong>No documentation of decisions made mid-project</strong>, so nobody can explain why a particular service was split a certain way or what workaround was applied and where.</li>
+        <li><strong>Eroded internal trust in the roadmap</strong>, which is often the most expensive cost and the hardest to repair. Once a leadership team has been let down once, every future technology recommendation is treated with suspicion.</li>
+      </ul>
+
+      <h2>Three Checkpoints That Would Have Caught It Early</h2>
+      <p>None of this requires exotic tooling to prevent. It requires a structure that most engagements skip because it feels like overhead at the start, when everyone is still optimistic.</p>
+      <ol>
+        <li><strong>A written rollback plan for every phase</strong>, not only for the migration as a whole. If a vendor cannot explain how phase two gets safely undone, that is a signal worth noting before phase two even starts.</li>
+        <li><strong>Weekly written status, not verbal.</strong> A short email summarizing what moved, what is blocked, and what comes next creates a paper trail and forces a clarity that a status call often allows to slip.</li>
+        <li><strong>A named technical owner on your side</strong> who understands the architecture well enough to take over without the original vendor, even if you never expect to need it. If nobody internally could pick up the project tomorrow, that is the real risk, not the vendor's intentions.</li>
+      </ol>
+
+      <h2>If You Are Already Here</h2>
+      <p>If a migration has already stalled, the fastest path back is usually a short, scoped audit: what has actually moved, what remains on the old system, and what the safest sequence is to finish without introducing new risk. Resist the urge to simply "push through" without that audit. Finishing a half-documented migration blind is how a difficult situation becomes a production incident.</p>
+
+      <div class="article-cta">
+        <h3>Mid-migration, and the vendor has gone quiet?</h3>
+        <p>We can carry out a fast audit of where things actually stand before you decide on the next step.</p>
+        <a href="/contact.html" class="btn btn-primary">Book a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="/services/">Services</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Built a Sports League Website 70x Faster: ZTactique</title>
+  <meta name="description" content="A public, verifiable case study: how a lean two-service architecture and disciplined engineering practice beat a heavily-resourced official website on speed, reliability, and user experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="btn btn-outline">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/insights/">Insights</a><span>/</span>Case Study</div>
+      <h1>How We Built a Sports League Website 70x Faster Than the Official One</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container article-body">
+      <div class="article-meta">
+        <span>Case Study</span> · <span>6 min read</span>
+      </div>
+
+      <p><em>Most case studies ask you to take our word for it. This one you can check yourself: the result is a live, public website, not a confidential engagement. <a href="https://fdl.saudiafootball.com" target="_blank" rel="noopener">See it live →</a></em></p>
+
+      <p>The official website for the Saudi First Division (Yelo League) was slow, and it offered fans little beyond basic scores. There was no kickoff countdown, no useful player detail, and long waits for pages to load. We took it as an exercise: use the same publicly available data to build a faster, more complete alternative, and prove out an approach we use with clients, namely lean infrastructure, disciplined engineering, and every claim backed by evidence.</p>
+
+      <h2>The Problem Was Not a Lack of Infrastructure</h2>
+      <p>A closer look at the official site explained why being "in the cloud" had not solved its speed problem. It was running through three separate content delivery networks stacked on top of each other, plus a bot-verification check and video widgets loading on pages that did not need them.</p>
+      <p>More infrastructure was not making it faster. It was slowing it down. This is a pattern we see often: teams add tools to fix a performance problem, and the tooling itself becomes the bottleneck.</p>
+
+      <h2>Building Lean, on Purpose</h2>
+      <p>Rather than layering on more infrastructure, we built the new site lean from the start: one small service to serve the pages, one to fetch and prepare the data, and a simple operating rule, which is to always show visitors something instantly and then quietly refresh it in the background. Standings, fixtures, and player data get a fast local copy that is always ready to serve, even if the original source is briefly unavailable.</p>
+      <p>The result launched fully bilingual, in Arabic and English, from day one, something the official site still does not offer.</p>
+
+      <h2>What We Caught Before It Became a Problem</h2>
+      <p>Building something reliable is not only about writing code that happens to work. It is about catching what breaks under real usage, and confirming every fix with evidence instead of assuming it worked. A few examples from this build:</p>
+      <ul>
+        <li><strong>A 7-second load time, fixed.</strong> News articles were taking nearly 7 seconds to appear, diagnosed with real browser data rather than guesswork. Rebuilt so visitors see content immediately while a fresh copy loads behind the scenes, measured before and after at under a tenth of a second.</li>
+        <li><strong>A silent data-loss risk, closed.</strong> When an external data source briefly rate-limited requests as traffic grew, we found and fixed a related gap where a failed refresh could have overwritten good data with nothing. The fix was simple: never let an empty result replace a good one.</li>
+        <li><strong>A launch-breaking bug, caught in review.</strong> A subtle error in the light and dark mode switch, of the kind that would have broken every single page view, was found through code review before launch, not by waiting for a visitor to report it.</li>
+        <li><strong>A privacy gap, closed proactively.</strong> A routine check turned up a default web address quietly exposing a fragment of the account owner's email. It was disabled immediately, with everything depending on it safely re-pointed first.</li>
+      </ul>
+
+      <div class="article-cta">
+        <h3>Do you recognize any of these patterns in your own systems?</h3>
+        <p>Slow load times, infrastructure sprawl, and untested failure paths are usually fixable without a rebuild. Let us talk about what is actually happening under the hood.</p>
+        <a href="/contact.html" class="btn btn-primary">Book a Discovery Call</a>
+      </div>
+
+      <h2>The Results, Measured</h2>
+      <p>The site is live, public, and tracked with real analytics, not only visit counts but what people actually do: switching languages, browsing photos, reading articles, and how long they stay.</p>
+      <ul>
+        <li><strong>70x</strong> faster news loading than the pattern it replaced</li>
+        <li><strong>Bilingual</strong> in Arabic and English from day one</li>
+      </ul>
+
+      <h2>The Takeaway</h2>
+      <p><strong>More technology is not the same as better technology.</strong> The official site runs more infrastructure than this one and is still slower. The speed came from fewer, better decisions, not from spending more.</p>
+      <p><strong>Never assume a fix worked. Confirm it.</strong> Every improvement here was measured with real evidence before being called done: real visitor data, real before-and-after timing. That is the same discipline we bring to client engagements.</p>
+      <p><strong>Protect against the failure you did not expect.</strong> Good systems do not only handle the happy path. They fail safely when something goes wrong, instead of quietly making it worse.</p>
+
+      <div class="article-cta">
+        <h3>Want This Kind of Discipline Applied to Your Product?</h3>
+        <p>Whether it is a slow site, a fragile system, or a build that has outgrown its own infrastructure, we approach it the same way: lean first, evidence always.</p>
+        <a href="/contact.html" class="btn btn-primary">Book a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="/services/">Services</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

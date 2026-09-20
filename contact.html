@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact: ZTactique</title>
+  <meta name="description" content="Get in touch with ZTactique to talk through an IT strategy, cloud migration, or software development challenge." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="btn btn-outline">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span>/</span>Contact</div>
+      <h1>Let's Talk About Your IT Challenges</h1>
+      <p class="hero-sub">Whether you are planning a migration, evaluating vendors, or looking for a technology partner for a new initiative, we would be glad to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact">
+    <div class="container contact-inner">
+      <div class="contact-page-info">
+        <div class="info-card">
+          <h4>Email</h4>
+          <a href="mailto:support@ztactique.com" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            support@ztactique.com
+          </a>
+        </div>
+        <div class="info-card">
+          <h4>Response Time</h4>
+          <p>We reply within one business day. For urgent matters, say so in your message.</p>
+        </div>
+        <div class="info-card">
+          <h4>First Step</h4>
+          <p>Every new engagement starts with a free 30-minute discovery call. There is no sales pitch, only a conversation about what you are facing.</p>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a8c9f845-d983-4963-a355-919d87147a59" />
+        <input type="hidden" name="subject" value="New enquiry from ztactique.com" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="company">Company (optional)</label>
+          <input type="text" id="company" name="company" placeholder="Acme Corp" />
+        </div>
+        <div class="form-group">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or challenge..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+      </form>
+      <div class="form-success" id="form-success" style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. We'll get back to you within one business day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
+      <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="/services/">Services</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

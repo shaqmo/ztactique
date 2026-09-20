@@ -1,0 +1,131 @@
+<Rive version="1" kind="fragment">
+    <Artboard width="500" height="500" name="Hero Mark" defaultStateMachineId="1:2" id="1:1">
+
+        <Node x="250" y="250" rotation="4.18879" name="Orbit C" id="1:10">
+            <Shape x="0" y="-205" name="Dot C" id="1:11">
+                <Ellipse width="22" height="22" originX="0.5" originY="0.5" name="Path"/>
+                <Fill name="Fill">
+                    <RadialGradient startX="-6" startY="-6" endX="10" endY="0" name="Gradient">
+                        <GradientStop colorValue="FF8CA0AA" position="0"/>
+                        <GradientStop colorValue="FF4D5D67" position="1"/>
+                    </RadialGradient>
+                </Fill>
+            </Shape>
+        </Node>
+
+        <Node x="250" y="250" rotation="2.0943951" name="Orbit B" id="1:12">
+            <Shape x="0" y="-165" name="Dot B" id="1:13">
+                <Ellipse width="26" height="26" originX="0.5" originY="0.5" name="Path"/>
+                <Fill name="Fill">
+                    <RadialGradient startX="-7" startY="-7" endX="12" endY="0" name="Gradient">
+                        <GradientStop colorValue="FFBEE0E2" position="0"/>
+                        <GradientStop colorValue="FF76ABAE" position="1"/>
+                    </RadialGradient>
+                </Fill>
+            </Shape>
+        </Node>
+
+        <Node x="250" y="250" rotation="0" name="Orbit A" id="1:14">
+            <Shape x="0" y="-130" name="Dot A" id="1:15">
+                <Ellipse width="30" height="30" originX="0.5" originY="0.5" name="Path"/>
+                <Fill name="Fill">
+                    <RadialGradient startX="-8" startY="-8" endX="14" endY="0" name="Gradient">
+                        <GradientStop colorValue="FFFFB199" position="0"/>
+                        <GradientStop colorValue="FFFF5722" position="1"/>
+                    </RadialGradient>
+                </Fill>
+            </Shape>
+        </Node>
+
+        <Node x="250" y="250" name="Core" id="1:16">
+            <Shape name="Diamond Inner" id="1:18">
+                <Rectangle width="90" height="90" originX="0.5" originY="0.5" rotation="0.7853982" name="Path"/>
+                <Fill name="Fill">
+                    <RadialGradient startX="-8" startY="-8" endX="38" endY="0" name="Gradient">
+                        <GradientStop colorValue="FFA9D6D8" position="0"/>
+                        <GradientStop colorValue="FF76ABAE" position="1"/>
+                    </RadialGradient>
+                </Fill>
+            </Shape>
+            <Shape name="Diamond" id="1:17">
+                <Rectangle width="150" height="150" originX="0.5" originY="0.5" rotation="0.7853982" name="Path"/>
+                <Fill name="Fill">
+                    <LinearGradient startX="-50" startY="-50" endX="50" endY="50" name="Gradient">
+                        <GradientStop colorValue="FF4A5560" position="0"/>
+                        <GradientStop colorValue="FF262D34" position="1"/>
+                    </LinearGradient>
+                </Fill>
+            </Shape>
+        </Node>
+
+        <Shape x="250" y="250" name="Aura" id="1:20">
+            <Ellipse width="440" height="440" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <RadialGradient startX="0" startY="0" endX="200" endY="0" name="Gradient">
+                    <GradientStop colorValue="332F9CA0" position="0"/>
+                    <GradientStop colorValue="002F9CA0" position="1"/>
+                </RadialGradient>
+            </Fill>
+        </Shape>
+
+        <StateMachine name="State Machine 1" id="1:2">
+            <StateMachineLayer name="Layer 1" id="1:3">
+                <AnyState x="200" y="-120"/>
+                <ExitState x="400" y="-120"/>
+                <EntryState>
+                    <StateTransition stateToId="1:5"/>
+                </EntryState>
+                <AnimationState x="200" animationId="1:4" id="1:5"/>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation loopValue="loop" duration="360" name="Drift" id="1:4">
+            <KeyedObject objectId="1:10">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="4.18879" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="-2.0943955" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+
+            <KeyedObject objectId="1:12">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="2.0943951" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="8.3775806" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+
+            <KeyedObject objectId="1:14">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="12.566371" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+
+            <KeyedObject objectId="1:16">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="-6.2831855" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="1.08" frame="180" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="1.08" frame="180" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="360" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+</Rive>

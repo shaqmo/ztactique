@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZTactique — IT Consulting</title>
+  <title>ZTactique: IT Consulting</title>
   <meta name="description" content="ZTactique delivers precision IT strategy, cloud infrastructure, and software development for ambitious organizations." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav-wrapper">
     <nav class="nav container">
-      <a href="#" class="nav-logo">Z<span>Tactique</span></a>
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="btn btn-outline">Contact Us</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="btn btn-outline">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -30,12 +31,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-tag">IT Consulting &amp; Technology Partners</div>
-      <h1>Precision IT.<br />Strategic Results.</h1>
-      <p class="hero-sub">ZTactique partners with organizations to align technology with business goals — from high-level strategy to hands-on execution.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-        <a href="#services" class="btn btn-ghost">Our Services</a>
+      <div class="hero-copy">
+        <div class="hero-tag">IT Consulting &amp; Technology Partners</div>
+        <h1>"Our last vendor ghosted us mid-migration, and now nobody trusts the roadmap."</h1>
+        <p class="hero-sub">If that sounds familiar, you do not need another vague promise. What you need is a technology partner who shows up, communicates clearly, and finishes what they start.</p>
+        <div class="hero-cta">
+          <a href="/contact.html" class="btn btn-primary">Book a Call</a>
+          <a href="#services" class="btn btn-ghost">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <canvas id="hero-rive" width="500" height="500"></canvas>
       </div>
     </div>
   </section>
@@ -46,13 +52,13 @@
       <div class="section-header">
         <span class="section-tag">What We Do</span>
         <h2>Services Built Around Your Goals</h2>
-        <p>We don't sell one-size-fits-all packages. We understand your business first, then deliver the right solutions.</p>
+        <p>We do not sell one-size-fits-all packages. We take the time to understand your business first, and only then do we propose the right solution.</p>
       </div>
       <div class="cards">
 
         <div class="card">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <canvas class="rive-icon" data-artboard="IT Strategy" width="32" height="32"></canvas>
           </div>
           <h3>IT Strategy &amp; Consulting</h3>
           <p>We help leadership teams make confident technology decisions. From IT roadmaps and vendor selection to digital transformation planning, we bring clarity to complexity.</p>
@@ -62,11 +68,12 @@
             <li>Vendor evaluation &amp; selection</li>
             <li>Digital transformation advisory</li>
           </ul>
+          <a href="/services/it-strategy.html" class="card-link">Learn more →</a>
         </div>
 
         <div class="card">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg>
+            <canvas class="rive-icon" data-artboard="Cloud Infrastructure" width="32" height="32"></canvas>
           </div>
           <h3>Cloud &amp; Infrastructure</h3>
           <p>Reliable, scalable infrastructure underpins everything you do. We design, migrate, and manage cloud environments built to grow with your business.</p>
@@ -76,11 +83,12 @@
             <li>DevOps &amp; CI/CD pipelines</li>
             <li>Infrastructure cost optimization</li>
           </ul>
+          <a href="/services/cloud-infrastructure.html" class="card-link">Learn more →</a>
         </div>
 
         <div class="card">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <canvas class="rive-icon" data-artboard="Software Development" width="32" height="32"></canvas>
           </div>
           <h3>Software Development</h3>
           <p>When off-the-shelf tools aren't enough, we build what you need. Custom applications, integrations, and automation solutions delivered to spec.</p>
@@ -90,8 +98,45 @@
             <li>Legacy system modernization</li>
             <li>Workflow automation</li>
           </ul>
+          <a href="/services/software-development.html" class="card-link">Learn more →</a>
         </div>
 
+      </div>
+      <div class="section-footer">
+        <a href="/services/" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="how-we-work" class="section how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How We Work</span>
+        <h2>No Surprises, No Vague Timelines</h2>
+        <p>Most consulting frustration comes from unclear expectations. Below is exactly what happens when you work with us.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Discovery Call</h4>
+          <p>A free 30-minute call to understand your challenge, your constraints, and what "done" looks like. There is no sales pitch.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Scoped Proposal</h4>
+          <p>You get a written scope, timeline, and price before any work starts. If it changes, we tell you before it happens, not after.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Kickoff &amp; Delivery</h4>
+          <p>Only senior consultants are involved, with no hand-offs to juniors, and regular check-ins on a cadence of your choosing.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Handoff &amp; Support</h4>
+          <p>Clear documentation and a defined support window after delivery, so you're never left guessing what happens next.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -101,15 +146,16 @@
     <div class="container about-inner">
       <div class="about-text">
         <span class="section-tag">Why ZTactique</span>
-        <h2>We Work Like an In-House Team — Without the Overhead</h2>
-        <p>ZTactique was founded on a simple idea: businesses deserve IT partners who are genuinely invested in their outcomes, not just their invoices.</p>
-        <p>We take time to understand your business before recommending technology. That means fewer wasted projects, faster results, and solutions that actually hold up in production.</p>
+        <h2>We Work Like an In-House Team, Without the Overhead</h2>
+        <p>ZTactique was founded on a simple idea: businesses deserve IT partners who are genuinely invested in their outcomes, not only in their invoices.</p>
+        <p>We take the time to understand your business before we recommend any technology. This means fewer wasted projects, faster results, and solutions that truly hold up in production.</p>
+        <a href="/about.html" class="card-link">Read our full story →</a>
       </div>
       <div class="pillars">
         <div class="pillar">
           <div class="pillar-num">01</div>
           <h4>Deep Expertise</h4>
-          <p>Senior consultants across strategy, infrastructure, and development — no outsourcing, no hand-offs to juniors.</p>
+          <p>Senior consultants across strategy, infrastructure, and development, with no outsourcing and no hand-offs to juniors.</p>
         </div>
         <div class="pillar">
           <div class="pillar-num">02</div>
@@ -125,13 +171,51 @@
     </div>
   </section>
 
+  <!-- INSIGHTS PREVIEW -->
+  <section id="insights" class="section insights-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Insights</span>
+        <h2>Honest Notes on IT, Not Marketing Copy</h2>
+        <p>Practical notes from real engagements, without gated whitepapers and without filler.</p>
+      </div>
+      <div class="cards insight-grid">
+
+        <a href="/insights/fdl-performance-case-study.html" class="card insight-card">
+          <span class="insight-tag">Case Study</span>
+          <h3>How We Built a Sports League Website 70x Faster Than the Official One</h3>
+          <p>A public, verifiable case study in lean infrastructure and evidence-backed engineering. You can see the live result yourself.</p>
+          <span class="card-link">Read article →</span>
+        </a>
+
+        <a href="/insights/vendor-ghosting-migration.html" class="card insight-card">
+          <span class="insight-tag">Migrations</span>
+          <h3>The Real Cost When a Migration Vendor Disappears</h3>
+          <p>What actually breaks when a migration partner disappears, and the three checkpoints that would have caught it early.</p>
+          <span class="card-link">Read article →</span>
+        </a>
+
+        <a href="/insights/fractional-cto-signs.html" class="card insight-card">
+          <span class="insight-tag">Strategy</span>
+          <h3>5 Signs You Need a Fractional CTO, Not Another Developer</h3>
+          <p>Hiring signals leadership teams miss when the real gap is technology decision-making, not headcount.</p>
+          <span class="card-link">Read article →</span>
+        </a>
+
+      </div>
+      <div class="section-footer">
+        <a href="/insights/" class="btn btn-outline">View All Insights</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="container contact-inner">
       <div class="contact-text">
         <span class="section-tag">Get in Touch</span>
         <h2>Let's Talk About Your IT Challenges</h2>
-        <p>Whether you're planning a migration, evaluating vendors, or need a technology partner for a new initiative — we'd love to hear from you.</p>
+        <p>Whether you are planning a migration, evaluating vendors, or looking for a technology partner for a new initiative, we would be glad to hear from you.</p>
         <div class="contact-details">
           <a href="mailto:support@ztactique.com" class="contact-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -173,16 +257,18 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <a href="#" class="nav-logo">Z<span>Tactique</span></a>
+      <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
       <nav class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="/services/">Services</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@2.24.1/rive.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
