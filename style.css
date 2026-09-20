@@ -376,6 +376,52 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 .step h4 { margin-bottom: 8px; }
 .step p { font-size: 0.85rem; }
 
+/* ===== COMMITMENTS (risk reversal) ===== */
+.commitments { background: var(--bg-alt); }
+
+.commit-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 40px;
+}
+
+.commit-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.commit-item svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(118,171,174,0.2);
+  color: var(--navy);
+}
+
+.commit-item h4 { margin-bottom: 4px; }
+.commit-item p { font-size: 0.875rem; }
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: -4px;
+}
+
+.next-steps {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 /* ===== ABOUT ===== */
 .about { background: var(--bg); }
 
@@ -786,6 +832,8 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .commit-grid { grid-template-columns: repeat(2, 1fr); }
+
   .detail-grid,
   .values-grid,
   .insights-index .insight-grid {
@@ -839,6 +887,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
   .form-row { grid-template-columns: 1fr; }
 
   .steps { grid-template-columns: 1fr; }
+  .commit-grid { grid-template-columns: 1fr; }
 
   .stats { grid-template-columns: 1fr 1fr; }
   .page-hero { padding: 40px 0 48px; }
