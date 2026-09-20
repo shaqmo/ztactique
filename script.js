@@ -10,6 +10,29 @@ if (window.rive && heroCanvas) {
   });
 }
 
+// Hourglass: one-shot, plays once when scrolled into view
+var hourglassCanvas = document.getElementById('hourglass-rive');
+if (window.rive && hourglassCanvas) {
+  var hourglass = new rive.Rive({
+    src: '/assets/hourglass.riv',
+    canvas: hourglassCanvas,
+    artboard: 'Hourglass',
+    stateMachines: 'Play Once',
+    autoplay: false,
+    onLoad: function () {
+      hourglass.resizeDrawingSurfaceToCanvas();
+      if (!('IntersectionObserver' in window)) { hourglass.play(); return; }
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          hourglass.play();
+          observer.disconnect();
+        }
+      }, { threshold: 0.6 });
+      observer.observe(hourglassCanvas);
+    }
+  });
+}
+
 // Animated service-card icons (only present on pages with service cards)
 if (window.rive) {
   document.querySelectorAll('canvas.rive-icon').forEach(function (canvas) {
