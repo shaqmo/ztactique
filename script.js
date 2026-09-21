@@ -2,7 +2,7 @@
 const heroCanvas = document.getElementById('hero-rive');
 if (window.rive && heroCanvas) {
   new rive.Rive({
-    src: '/assets/hero.riv',
+    src: '/assets/hero-z.riv',
     canvas: heroCanvas,
     autoplay: true,
     stateMachines: 'State Machine 1',
