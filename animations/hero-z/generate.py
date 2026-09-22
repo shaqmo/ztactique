@@ -7,7 +7,7 @@ cols, rows = 10, 7
 gaps  = [0,20,17,14,11,9,7,5,4,3]
 durs  = [24,22,20,18,16,14,12,10,8,6]
 S = 1.6
-t0 = 10; starts=[]; acc=t0
+t0 = 0; starts=[]; acc=t0
 for g in gaps:
     acc += g; starts.append(round(acc*S))
 durs = [round(d*S) for d in durs]
@@ -59,13 +59,15 @@ for cid, s, e in zip(col_nodes, starts, ends):
 z_top, z_bottom, z_left, z_right = 120, 380, 165, 335
 z_height = z_bottom - z_top
 
-# exclamation mark geometry: dot sits on the Z's baseline, the bar
-# grows straight up from the dot, and its length matches the Z's height
+# exclamation mark geometry: dot bottom sits exactly on the Z's baseline,
+# and the bar's top sits exactly at the Z's top, so the whole mark spans
+# the same vertical range as the Z, not just a matching length
 dot_r = 13
 exclaim_x = z_right + 36
-dot_y = z_bottom - 8
 bar_gap = 6
+dot_y = z_bottom - dot_r
 bar_bottom_y = dot_y - dot_r - bar_gap
+bar_height = bar_bottom_y - z_top
 
 scene = f'''<Rive version="1" kind="fragment">
     <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="{sm_id}" id="1:1">
@@ -87,7 +89,7 @@ scene = f'''<Rive version="1" kind="fragment">
         <!-- Exclamation mark: the dot pops in on the Z's baseline, then the
              bar grows straight up from it, its length matching the Z's height -->
         <Node x="{exclaim_x}" y="{bar_bottom_y}" name="Exclaim Bar" id="{bar_node}" scaleY="0">
-            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="{z_height}" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="{bar_height}" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
         <Node x="{exclaim_x}" y="{dot_y}" name="Exclaim Dot" id="{dot_node}" scaleX="0" scaleY="0">

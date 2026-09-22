@@ -17,11 +17,11 @@
 
         <!-- Exclamation mark: the dot pops in on the Z's baseline, then the
              bar grows straight up from it, its length matching the Z's height -->
-        <Node x="371" y="353" name="Exclaim Bar" id="1:21" scaleY="0">
-            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="260" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        <Node x="371" y="348" name="Exclaim Bar" id="1:21" scaleY="0">
+            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="228" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
-        <Node x="371" y="372" name="Exclaim Dot" id="1:22" scaleX="0" scaleY="0">
+        <Node x="371" y="367" name="Exclaim Dot" id="1:22" scaleX="0" scaleY="0">
             <Shape x="0" y="0" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
@@ -125,67 +125,67 @@
             </StateMachineLayer>
         </StateMachine>
 
-        <LinearAnimation loopValue="oneShot" duration="314" name="Reveal" id="1:23">
+        <LinearAnimation loopValue="oneShot" duration="298" name="Reveal" id="1:23">
             <KeyedObject objectId="1:10"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="16" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="54" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="0" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="38" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:11"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="48" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="83" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="32" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="67" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:12"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="75" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="107" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="59" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="91" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:13"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="98" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="127" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="82" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="111" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:14"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="115" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="141" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="99" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="125" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:15"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="130" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="152" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="114" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="136" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:16"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="141" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="160" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="125" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="144" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:17"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="149" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="165" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="133" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="149" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:18"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="155" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="168" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="139" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="152" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:19"><KeyedProperty propertyKey="18">
-                <KeyFrameDouble value="1" frame="160" interpolationType="linear"/>
-                <KeyFrameDouble value="0" frame="170" interpolationType="linear"/>
+                <KeyFrameDouble value="1" frame="144" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="154" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:20"><KeyedProperty propertyKey="115">
-                <KeyFrameDouble value="0" frame="176" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                <KeyFrameDouble value="1" frame="236" interpolationType="linear"/>
+                <KeyFrameDouble value="0" frame="160" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                <KeyFrameDouble value="1" frame="220" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:21">
                 <KeyedProperty propertyKey="17">
-                    <KeyFrameDouble value="0" frame="258" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="284" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="242" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="268" interpolationType="linear"/>
                 </KeyedProperty>
             </KeyedObject>
             <KeyedObject objectId="1:22">
                 <KeyedProperty propertyKey="16">
-                    <KeyFrameDouble value="0" frame="230" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1.3" frame="244" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="254" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="214" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.3" frame="228" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="238" interpolationType="linear"/>
                 </KeyedProperty>
                 <KeyedProperty propertyKey="17">
-                    <KeyFrameDouble value="0" frame="230" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1.3" frame="244" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="254" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="214" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.3" frame="228" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="238" interpolationType="linear"/>
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
