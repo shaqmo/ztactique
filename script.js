@@ -1,5 +1,9 @@
-// Hero mark animation (only present on the homepage)
+// Hero mark animation (only present on the homepage).
+// A static SVG of the same first frame sits behind the canvas and paints
+// immediately on load; it's hidden once Rive has actually loaded and is
+// ready to draw, so there's no blank gap while the runtime/asset fetch.
 const heroCanvas = document.getElementById('hero-rive');
+const heroFallback = document.getElementById('hero-fallback');
 if (window.rive && heroCanvas) {
   new rive.Rive({
     src: '/assets/hero-z.riv',
@@ -7,6 +11,9 @@ if (window.rive && heroCanvas) {
     autoplay: true,
     stateMachines: 'State Machine 1',
     layout: new rive.Layout({ fit: rive.Fit.Contain }),
+    onLoad: function () {
+      if (heroFallback) heroFallback.style.display = 'none';
+    }
   });
 }
 

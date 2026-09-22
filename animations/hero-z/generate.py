@@ -17,10 +17,13 @@ last_end = max(ends)
 # wider size variation: small flecks up to larger dots
 sizes = [3, 4, 5, 6.5, 8, 10, 13, 16]
 colors = ["FF4D5D67","FF76ABAE","FF8EAAAC"]
+css_colors = {"FF4D5D67":"#4D5D67","FF76ABAE":"#76ABAE","FF8EAAAC":"#8EAAAC"}
 col_nodes = []
 xml_cols = []
+svg_dots = []  # for the static HTML fallback, so it matches this layout exactly
 for i in range(cols):
     cid = nid(); col_nodes.append(cid)
+    col_x = 40 + i * 46
     dots = []
     for j in range(rows):
         x = random.randint(-8,8)
@@ -28,9 +31,15 @@ for i in range(cols):
         r = random.choice(sizes)
         c = random.choice(colors)
         dots.append(f'''                <Shape x="{x}" y="{y}" name="Dot"><Ellipse width="{r*2}" height="{r*2}" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="{c}" name="C"/></Fill></Shape>''')
-    xml_cols.append(f'''        <Node x="{40+i*46}" y="0" name="Column {i+1}" id="{cid}">
+        svg_dots.append(f'<circle cx="{col_x+x}" cy="{y}" r="{r}" fill="{css_colors[c]}"/>')
+    xml_cols.append(f'''        <Node x="{col_x}" y="0" name="Column {i+1}" id="{cid}">
 {chr(10).join(dots)}
         </Node>''')
+
+# Write the same dot layout as a static SVG, so the page can paint it
+# immediately (no WASM/asset load wait) before Rive takes over.
+svg_markup = '\n    '.join(svg_dots)
+open("dots.svg.txt", "w").write(svg_markup)
 
 z_trim = nid()
 dot_node = nid()

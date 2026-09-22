@@ -198,13 +198,18 @@ p { color: var(--text-muted); }
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-visual canvas {
+  position: relative;
   width: 100%;
   max-width: 420px;
-  height: auto;
   aspect-ratio: 1 / 1;
+}
+
+.hero-visual canvas,
+.hero-visual svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-tag {
@@ -832,8 +837,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 
   .hero-copy { max-width: 100%; margin: 0 auto; }
   .hero-cta { justify-content: center; }
-  .hero-visual { order: -1; }
-  .hero-visual canvas { max-width: 280px; }
+  .hero-visual { order: -1; max-width: 280px; }
 
   .steps {
     grid-template-columns: repeat(2, 1fr);
