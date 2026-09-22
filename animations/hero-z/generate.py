@@ -33,19 +33,16 @@ for i in range(cols):
         </Node>''')
 
 z_trim = nid()
-bar_node = nid()
 dot_node = nid()
 anim_id = nid(); sm_id = nid(); layer_id = nid(); state_id = nid()
 z_start = last_end + 6
 z_end = z_start + 60
 
-# exclamation mark: dot pops in first, then the bar grows upward from it
+# accent dot pops in once the Z has finished drawing
 dot_start = z_end - 6
 dot_mid = dot_start + 14
 dot_end = dot_start + 24
-bar_start = dot_end + 4
-bar_end = bar_start + 26
-duration = bar_end + 30
+duration = dot_end + 30
 
 ease = '<CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>'
 keyed = []
@@ -55,25 +52,12 @@ for cid, s, e in zip(col_nodes, starts, ends):
                 <KeyFrameDouble value="0" frame="{e}" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>''')
 
-# taller Z: was 170-330 (160 tall), now 120-380 (260 tall)
-z_top, z_bottom, z_left, z_right = 120, 380, 165, 335
-z_height = z_bottom - z_top
-
-# exclamation mark geometry: matched to the Z's actual painted extent, not
-# just its path coordinates. The Z's round stroke caps add half the stroke
-# thickness beyond z_top/z_bottom, so the mark must extend by the same
-# amount to visually span the same range as the Z.
-z_stroke = 24
-z_cap = z_stroke / 2
-z_visual_top = z_top - z_cap
-z_visual_bottom = z_bottom + z_cap
+# original Z size
+z_top, z_bottom, z_left, z_right = 170, 330, 160, 340
 
 dot_r = 13
 exclaim_x = z_right + 36
-bar_gap = 6
-dot_y = z_visual_bottom - dot_r
-bar_bottom_y = dot_y - dot_r - bar_gap
-bar_height = bar_bottom_y - z_visual_top
+dot_y = z_bottom
 
 scene = f'''<Rive version="1" kind="fragment">
     <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="{sm_id}" id="1:1">
@@ -92,13 +76,8 @@ scene = f'''<Rive version="1" kind="fragment">
             </Stroke>
         </Shape>
 
-        <!-- Exclamation mark: the dot pops in on the Z's baseline, then the
-             bar grows straight up from it, its length matching the Z's height -->
-        <Node x="{exclaim_x}" y="{bar_bottom_y}" name="Exclaim Bar" id="{bar_node}" scaleY="0">
-            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="{bar_height}" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
-        </Node>
-
-        <Node x="{exclaim_x}" y="{dot_y}" name="Exclaim Dot" id="{dot_node}" scaleX="0" scaleY="0">
+        <!-- Accent dot: pops in on the Z's baseline once it has drawn -->
+        <Node x="{exclaim_x}" y="{dot_y}" name="Accent" id="{dot_node}" scaleX="0" scaleY="0">
             <Shape x="0" y="0" name="Dot"><Ellipse width="{dot_r*2}" height="{dot_r*2}" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
@@ -119,12 +98,6 @@ scene = f'''<Rive version="1" kind="fragment">
                 <KeyFrameDouble value="0" frame="{z_start}" interpolationType="cubic">{ease}</KeyFrameDouble>
                 <KeyFrameDouble value="1" frame="{z_end}" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
-            <KeyedObject objectId="{bar_node}">
-                <KeyedProperty propertyKey="17">
-                    <KeyFrameDouble value="0" frame="{bar_start}" interpolationType="cubic">{ease}</KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="{bar_end}" interpolationType="linear"/>
-                </KeyedProperty>
-            </KeyedObject>
             <KeyedObject objectId="{dot_node}">
                 <KeyedProperty propertyKey="16">
                     <KeyFrameDouble value="0" frame="{dot_start}" interpolationType="cubic">{ease}</KeyFrameDouble>
@@ -143,4 +116,4 @@ scene = f'''<Rive version="1" kind="fragment">
 </Rive>
 '''
 open("scene.rml","w").write(scene)
-print("duration", duration, "dots gone at", last_end, "z", z_start, z_end, "bar", bar_start, bar_end, "dot", dot_start, dot_end)
+print("duration", duration, "dots gone at", last_end, "z", z_start, z_end, "dot", dot_start, dot_end)
