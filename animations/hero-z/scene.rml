@@ -1,13 +1,13 @@
 <Rive version="1" kind="fragment">
-    <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="1:23" id="1:1">
+    <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="1:24" id="1:1">
 
         <!-- The letter Z, drawn on after the dots have gone -->
-        <Shape x="0" y="0" name="Z" id="1:26">
+        <Shape x="0" y="0" name="Z" id="1:27">
             <PointsPath isClosed="false" name="Path">
-                <StraightVertex x="160" y="170"/>
-                <StraightVertex x="340" y="170"/>
-                <StraightVertex x="160" y="330"/>
-                <StraightVertex x="340" y="330"/>
+                <StraightVertex x="165" y="120"/>
+                <StraightVertex x="335" y="120"/>
+                <StraightVertex x="165" y="380"/>
+                <StraightVertex x="335" y="380"/>
             </PointsPath>
             <Stroke thickness="24" cap="round" join="round" name="Stroke">
                 <SolidColor colorValue="FF76ABAE" name="Color"/>
@@ -15,111 +15,116 @@
             </Stroke>
         </Shape>
 
-        <Node x="376" y="330" name="Accent" id="1:21" scaleX="0" scaleY="0">
+        <!-- Exclamation mark: bar drops in, then the dot pops in beneath it -->
+        <Node x="371" y="290" name="Exclaim Bar" id="1:21" scaleY="0" opacity="0">
+            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="70" originX="0.5" originY="0" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        </Node>
+
+        <Node x="371" y="372" name="Exclaim Dot" id="1:22" scaleX="0" scaleY="0">
             <Shape x="0" y="0" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
         <Node x="40" y="0" name="Column 1" id="1:10">
-                <Shape x="2" y="63" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-7" y="118" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="3" y="177" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-7" y="239" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-6" y="309" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="5" y="357" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-1" y="417" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="2" y="51" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-7" y="108" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-7" y="198" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-6" y="255" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-1" y="295" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-5" y="366" name="Dot"><Ellipse width="6" height="6" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="4" y="417" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
         </Node>
         <Node x="86" y="0" name="Column 2" id="1:11">
-                <Shape x="4" y="57" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-4" y="132" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-5" y="193" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-3" y="240" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-2" y="317" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-6" y="357" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="7" y="441" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-4" y="60" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-5" y="140" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-3" y="172" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-5" y="263" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-7" y="303" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="5" y="372" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="6" y="437" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
         </Node>
         <Node x="132" y="0" name="Column 3" id="1:12">
-                <Shape x="6" y="77" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-3" y="129" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="1" y="205" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="6" y="252" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-5" y="326" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="2" y="363" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-7" y="418" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-3" y="57" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="1" y="137" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="6" y="184" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="8" y="254" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-4" y="321" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-6" y="387" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="3" y="445" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
         </Node>
         <Node x="178" y="0" name="Column 4" id="1:13">
-                <Shape x="2" y="75" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="7" y="143" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="0" y="204" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="1" y="262" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="4" y="316" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="3" y="364" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="7" y="417" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-6" y="59" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-6" y="107" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="6" y="184" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="3" y="229" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-3" y="297" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-2" y="370" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-1" y="439" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
         </Node>
         <Node x="224" y="0" name="Column 5" id="1:14">
-                <Shape x="-4" y="69" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="7" y="119" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="4" y="191" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="0" y="260" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="4" y="308" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-3" y="363" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-1" y="414" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-6" y="52" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="0" y="112" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="0" y="192" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="4" y="242" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-3" y="299" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-1" y="352" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-3" y="430" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
         </Node>
         <Node x="270" y="0" name="Column 6" id="1:15">
-                <Shape x="-3" y="70" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-4" y="140" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="2" y="182" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-7" y="263" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="4" y="319" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="7" y="379" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-6" y="427" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-4" y="68" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="2" y="112" name="Dot"><Ellipse width="6" height="6" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="4" y="191" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-5" y="258" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-2" y="294" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-3" y="359" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-7" y="420" name="Dot"><Ellipse width="6" height="6" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
         </Node>
         <Node x="316" y="0" name="Column 7" id="1:16">
-                <Shape x="-5" y="75" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-5" y="114" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-5" y="197" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-6" y="247" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-4" y="310" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="3" y="384" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="7" y="443" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-4" y="76" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-8" y="108" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="4" y="175" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="3" y="258" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="7" y="319" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="1" y="357" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="2" y="430" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
         </Node>
         <Node x="362" y="0" name="Column 8" id="1:17">
-                <Shape x="1" y="59" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="2" y="130" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="-3" y="175" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="3" y="243" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="8" y="313" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="0" y="377" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-1" y="446" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-3" y="75" name="Dot"><Ellipse width="6" height="6" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="8" y="127" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-8" y="199" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-6" y="244" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="3" y="304" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-1" y="364" name="Dot"><Ellipse width="13.0" height="13.0" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="-1" y="426" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
         </Node>
         <Node x="408" y="0" name="Column 9" id="1:18">
-                <Shape x="-1" y="66" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-1" y="126" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="3" y="175" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="7" y="250" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="3" y="322" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-6" y="368" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="7" y="426" name="Dot"><Ellipse width="14" height="14" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-8" y="43" name="Dot"><Ellipse width="16" height="16" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="0" y="116" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="3" y="189" name="Dot"><Ellipse width="8" height="8" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-5" y="242" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="2" y="303" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-8" y="382" name="Dot"><Ellipse width="20" height="20" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-6" y="421" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
         </Node>
         <Node x="454" y="0" name="Column 10" id="1:19">
-                <Shape x="7" y="54" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="3" y="119" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="-2" y="204" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="2" y="239" name="Dot"><Ellipse width="18" height="18" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
-                <Shape x="4" y="299" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
-                <Shape x="-4" y="355" name="Dot"><Ellipse width="12" height="12" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
-                <Shape x="6" y="423" name="Dot"><Ellipse width="22" height="22" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="-2" y="72" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="2" y="109" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
+                <Shape x="4" y="171" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-4" y="229" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="6" y="299" name="Dot"><Ellipse width="32" height="32" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF8EAAAC" name="C"/></Fill></Shape>
+                <Shape x="3" y="361" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF4D5D67" name="C"/></Fill></Shape>
+                <Shape x="-8" y="420" name="Dot"><Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FF76ABAE" name="C"/></Fill></Shape>
         </Node>
 
-        <StateMachine name="State Machine 1" id="1:23">
-            <StateMachineLayer name="Layer 1" id="1:24">
+        <StateMachine name="State Machine 1" id="1:24">
+            <StateMachineLayer name="Layer 1" id="1:25">
                 <AnyState x="80" y="-40"/>
                 <ExitState x="240" y="-40"/>
-                <EntryState><StateTransition stateToId="1:25"/></EntryState>
-                <AnimationState x="80" y="40" animationId="1:22" id="1:25"/>
+                <EntryState><StateTransition stateToId="1:26"/></EntryState>
+                <AnimationState x="80" y="40" animationId="1:23" id="1:26"/>
             </StateMachineLayer>
         </StateMachine>
 
-        <LinearAnimation loopValue="oneShot" duration="284" name="Reveal" id="1:22">
+        <LinearAnimation loopValue="oneShot" duration="304" name="Reveal" id="1:23">
             <KeyedObject objectId="1:10"><KeyedProperty propertyKey="18">
                 <KeyFrameDouble value="1" frame="16" interpolationType="linear"/>
                 <KeyFrameDouble value="0" frame="54" interpolationType="linear"/>
@@ -165,15 +170,25 @@
                 <KeyFrameDouble value="1" frame="236" interpolationType="linear"/>
             </KeyedProperty></KeyedObject>
             <KeyedObject objectId="1:21">
-                <KeyedProperty propertyKey="16">
-                    <KeyFrameDouble value="0" frame="230" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1.25" frame="244" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="254" interpolationType="linear"/>
-                </KeyedProperty>
                 <KeyedProperty propertyKey="17">
                     <KeyFrameDouble value="0" frame="230" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1.25" frame="244" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
-                    <KeyFrameDouble value="1" frame="254" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="246" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble value="0" frame="230" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="236" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="1:22">
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="0" frame="250" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.3" frame="264" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="274" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble value="0" frame="250" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.3" frame="264" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="274" interpolationType="linear"/>
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
