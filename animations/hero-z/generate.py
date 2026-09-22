@@ -59,15 +59,21 @@ for cid, s, e in zip(col_nodes, starts, ends):
 z_top, z_bottom, z_left, z_right = 120, 380, 165, 335
 z_height = z_bottom - z_top
 
-# exclamation mark geometry: dot bottom sits exactly on the Z's baseline,
-# and the bar's top sits exactly at the Z's top, so the whole mark spans
-# the same vertical range as the Z, not just a matching length
+# exclamation mark geometry: matched to the Z's actual painted extent, not
+# just its path coordinates. The Z's round stroke caps add half the stroke
+# thickness beyond z_top/z_bottom, so the mark must extend by the same
+# amount to visually span the same range as the Z.
+z_stroke = 24
+z_cap = z_stroke / 2
+z_visual_top = z_top - z_cap
+z_visual_bottom = z_bottom + z_cap
+
 dot_r = 13
 exclaim_x = z_right + 36
 bar_gap = 6
-dot_y = z_bottom - dot_r
+dot_y = z_visual_bottom - dot_r
 bar_bottom_y = dot_y - dot_r - bar_gap
-bar_height = bar_bottom_y - z_top
+bar_height = bar_bottom_y - z_visual_top
 
 scene = f'''<Rive version="1" kind="fragment">
     <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="{sm_id}" id="1:1">

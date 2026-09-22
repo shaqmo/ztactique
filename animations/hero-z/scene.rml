@@ -17,11 +17,11 @@
 
         <!-- Exclamation mark: the dot pops in on the Z's baseline, then the
              bar grows straight up from it, its length matching the Z's height -->
-        <Node x="371" y="348" name="Exclaim Bar" id="1:21" scaleY="0">
-            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="228" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        <Node x="371" y="360.0" name="Exclaim Bar" id="1:21" scaleY="0">
+            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="252.0" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
-        <Node x="371" y="367" name="Exclaim Dot" id="1:22" scaleX="0" scaleY="0">
+        <Node x="371" y="379.0" name="Exclaim Dot" id="1:22" scaleX="0" scaleY="0">
             <Shape x="0" y="0" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
