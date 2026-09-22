@@ -39,13 +39,13 @@ anim_id = nid(); sm_id = nid(); layer_id = nid(); state_id = nid()
 z_start = last_end + 6
 z_end = z_start + 60
 
-# exclamation mark: bar drops in first, then dot pops in beneath it
-bar_start = z_end - 6
-bar_end = bar_start + 16
-dot_start = bar_end + 4
+# exclamation mark: dot pops in first, then the bar grows upward from it
+dot_start = z_end - 6
 dot_mid = dot_start + 14
 dot_end = dot_start + 24
-duration = dot_end + 30
+bar_start = dot_end + 4
+bar_end = bar_start + 26
+duration = bar_end + 30
 
 ease = '<CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>'
 keyed = []
@@ -57,6 +57,15 @@ for cid, s, e in zip(col_nodes, starts, ends):
 
 # taller Z: was 170-330 (160 tall), now 120-380 (260 tall)
 z_top, z_bottom, z_left, z_right = 120, 380, 165, 335
+z_height = z_bottom - z_top
+
+# exclamation mark geometry: dot sits on the Z's baseline, the bar
+# grows straight up from the dot, and its length matches the Z's height
+dot_r = 13
+exclaim_x = z_right + 36
+dot_y = z_bottom - 8
+bar_gap = 6
+bar_bottom_y = dot_y - dot_r - bar_gap
 
 scene = f'''<Rive version="1" kind="fragment">
     <Artboard width="500" height="500" name="Hero Z" defaultStateMachineId="{sm_id}" id="1:1">
@@ -75,13 +84,14 @@ scene = f'''<Rive version="1" kind="fragment">
             </Stroke>
         </Shape>
 
-        <!-- Exclamation mark: bar drops in, then the dot pops in beneath it -->
-        <Node x="{z_right + 36}" y="{z_bottom - 90}" name="Exclaim Bar" id="{bar_node}" scaleY="0" opacity="0">
-            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="70" originX="0.5" originY="0" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        <!-- Exclamation mark: the dot pops in on the Z's baseline, then the
+             bar grows straight up from it, its length matching the Z's height -->
+        <Node x="{exclaim_x}" y="{bar_bottom_y}" name="Exclaim Bar" id="{bar_node}" scaleY="0">
+            <Shape x="0" y="0" name="Bar"><Rectangle width="20" height="{z_height}" originX="0.5" originY="1" cornerRadiusTL="10" cornerRadiusTR="10" cornerRadiusBL="10" cornerRadiusBR="10" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
-        <Node x="{z_right + 36}" y="{z_bottom - 8}" name="Exclaim Dot" id="{dot_node}" scaleX="0" scaleY="0">
-            <Shape x="0" y="0" name="Dot"><Ellipse width="26" height="26" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        <Node x="{exclaim_x}" y="{dot_y}" name="Exclaim Dot" id="{dot_node}" scaleX="0" scaleY="0">
+            <Shape x="0" y="0" name="Dot"><Ellipse width="{dot_r*2}" height="{dot_r*2}" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
         </Node>
 
 {chr(10).join(xml_cols)}
@@ -105,10 +115,6 @@ scene = f'''<Rive version="1" kind="fragment">
                 <KeyedProperty propertyKey="17">
                     <KeyFrameDouble value="0" frame="{bar_start}" interpolationType="cubic">{ease}</KeyFrameDouble>
                     <KeyFrameDouble value="1" frame="{bar_end}" interpolationType="linear"/>
-                </KeyedProperty>
-                <KeyedProperty propertyKey="18">
-                    <KeyFrameDouble value="0" frame="{bar_start}" interpolationType="linear"/>
-                    <KeyFrameDouble value="1" frame="{bar_start+6}" interpolationType="linear"/>
                 </KeyedProperty>
             </KeyedObject>
             <KeyedObject objectId="{dot_node}">
