@@ -89,11 +89,12 @@ const form = document.getElementById('contact-form');
 const successMsg = document.getElementById('form-success');
 const submitBtn = document.getElementById('submit-btn');
 
+var isAr = document.documentElement.lang === 'ar';
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = isAr ? 'جارٍ الإرسال…' : 'Sending…';
 
     const data = new FormData(form);
 
@@ -112,8 +113,8 @@ if (form) {
       }
     } catch {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
-      alert('Something went wrong. Please try again or email us directly at support@ztactique.com');
+      submitBtn.textContent = isAr ? 'إرسال الرسالة' : 'Send Message';
+      alert(isAr ? 'حدث خطأ ما. يُرجى المحاولة مرة أخرى أو مراسلتنا مباشرة على support@ztactique.com' : 'Something went wrong. Please try again or email us directly at support@ztactique.com');
     }
   });
 }

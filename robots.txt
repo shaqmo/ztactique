@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ztactique.com/sitemap.xml

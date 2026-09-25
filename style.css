@@ -1154,3 +1154,50 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 @media (max-width: 640px) {
   .stats--3 { grid-template-columns: 1fr; gap: 20px; }
 }
+
+
+/* ===== ARABIC (RTL) ===== */
+html[lang="ar"] body {
+  font-family: 'IBM Plex Sans Arabic', 'Roboto', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+}
+/* Arabic letters connect: any letter-spacing breaks the joins */
+html[lang="ar"] * { letter-spacing: 0 !important; text-transform: none !important; }
+html[lang="ar"] h1 { line-height: 1.35; font-weight: 700; }
+html[lang="ar"] h2 { line-height: 1.4; }
+html[lang="ar"] h3 { line-height: 1.5; }
+html[lang="ar"] .section-tag,
+html[lang="ar"] .hero-tag,
+html[lang="ar"] .insight-tag { font-size: 0.85rem; }
+
+/* the brand mark stays Latin and left-to-right */
+html[dir="rtl"] .nav-logo { direction: ltr; }
+html[dir="rtl"] .contact-link { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] input[type="email"] { text-align: right; }
+
+/* bullets and rules move to the right-hand side */
+html[dir="rtl"] .card-list li,
+html[dir="rtl"] .detail-block li { padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .card-list li { padding-right: 16px; }
+html[dir="rtl"] .card-list li::before,
+html[dir="rtl"] .detail-block li::before { left: auto; right: 0; }
+
+html[dir="rtl"] .pillar { padding-left: 0; padding-right: 20px; border-left: 0; border-right: 2px solid var(--border); }
+html[dir="rtl"] .pillar:hover { border-right-color: var(--navy-light); }
+
+html[dir="rtl"] .next-steps { padding-left: 0; padding-right: 20px; }
+html[dir="rtl"] .article-body ul,
+html[dir="rtl"] .article-body ol { padding-left: 0; padding-right: 22px; }
+
+html[dir="rtl"] .method-step { padding: 8px 0 8px 28px; margin-right: 0; margin-left: 28px; border-right: 0; border-left: 1px solid rgba(255,255,255,0.14); }
+html[dir="rtl"] .method-step:last-child { border-left: 0; margin-left: 0; padding-left: 0; }
+
+html[dir="rtl"] .skip-link { left: auto; right: 16px; }
+
+@media (max-width: 900px) {
+  html[dir="rtl"] .method-step:nth-child(2) { border-left: 0; margin-left: 0; }
+}
+@media (max-width: 640px) {
+  html[dir="rtl"] .method-step { border-left: 0; margin-left: 0; padding-left: 0; }
+}
