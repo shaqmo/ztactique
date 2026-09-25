@@ -244,4 +244,99 @@
 
     </Artboard>
 
+    <!-- ============================================================ -->
+    <!-- ICON 4: Agentic Development (satellites orbit the hub on hover) -->
+    <!-- ============================================================ -->
+    <Artboard x="300" width="64" height="64" name="Agentic Development" defaultStateMachineId="40:2" id="40:1">
+
+        <Node x="32" y="32" name="Hub" id="40:9">
+            <Shape x="0" y="0" name="Core"><Ellipse width="11" height="11" originX="0.5" originY="0.5" name="P"/><Fill name="F"><SolidColor colorValue="FFFF5722" name="C"/></Fill></Shape>
+        </Node>
+
+        <Node x="32" y="32" name="Ring" id="40:10">
+            <Node x="0" y="0" rotation="0" name="Arm 1" id="40:11">
+                <Shape x="0" y="0" name="Spoke" id="40:12">
+                    <PointsPath isClosed="false" name="Line">
+                        <StraightVertex x="0" y="-7"/>
+                        <StraightVertex x="0" y="-15.5"/>
+                    </PointsPath>
+                    <Stroke thickness="2.6" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+                <Shape x="0" y="-20" name="Satellite">
+                    <Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/>
+                    <Stroke thickness="3" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+            </Node>
+            <Node x="0" y="0" rotation="2.0943951" name="Arm 2" id="40:13">
+                <Shape x="0" y="0" name="Spoke" id="40:14">
+                    <PointsPath isClosed="false" name="Line">
+                        <StraightVertex x="0" y="-7"/>
+                        <StraightVertex x="0" y="-15.5"/>
+                    </PointsPath>
+                    <Stroke thickness="2.6" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+                <Shape x="0" y="-20" name="Satellite">
+                    <Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/>
+                    <Stroke thickness="3" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+            </Node>
+            <Node x="0" y="0" rotation="4.1887902" name="Arm 3" id="40:15">
+                <Shape x="0" y="0" name="Spoke" id="40:16">
+                    <PointsPath isClosed="false" name="Line">
+                        <StraightVertex x="0" y="-7"/>
+                        <StraightVertex x="0" y="-15.5"/>
+                    </PointsPath>
+                    <Stroke thickness="2.6" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+                <Shape x="0" y="-20" name="Satellite">
+                    <Ellipse width="10" height="10" originX="0.5" originY="0.5" name="P"/>
+                    <Stroke thickness="3" cap="round" join="round" name="Stroke"><SolidColor colorValue="FF76ABAE" name="Color"/></Stroke>
+                </Shape>
+            </Node>
+        </Node>
+
+        <StateMachine name="Hover SM" id="40:2">
+            <StateMachineBool name="Hovered" id="40:30"/>
+            <StateMachineLayer name="Layer 1" id="40:3">
+                <AnyState x="80" y="-40"/>
+                <ExitState x="240" y="-40"/>
+                <EntryState><StateTransition stateToId="40:20"/></EntryState>
+                <AnimationState x="80" y="40" animationId="40:40" id="40:20">
+                    <StateTransition stateToId="40:21" duration="150">
+                        <TransitionBoolCondition inputId="40:30" opValue="equal"/>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState x="80" y="140" animationId="40:41" id="40:21">
+                    <StateTransition stateToId="40:20" duration="220">
+                        <TransitionBoolCondition inputId="40:30" opValue="notEqual"/>
+                    </StateTransition>
+                </AnimationState>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation duration="1" name="Rest" id="40:40"/>
+
+        <LinearAnimation loopValue="loop" duration="120" name="Orbit" id="40:41">
+            <KeyedObject objectId="40:10">
+                <KeyedProperty propertyKey="15">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="2.0943951" frame="120" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="40:9">
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.35" frame="60" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="120" interpolationType="linear"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.35" frame="60" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="120" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+    </Artboard>
+
 </Rive>
