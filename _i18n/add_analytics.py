@@ -13,7 +13,7 @@ import glob, os, re, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 PAGES = ["index.html", "about.html", "contact.html"] + sorted(glob.glob("services/*.html")) + sorted(glob.glob("insights/*.html"))
-BEACON_RE = re.compile(r"\n?[ \t]*<script defer src=\"https://static\.cloudflareinsights\.com/beacon\.min\.js\"[^>]*></script>")
+BEACON_RE = re.compile(r"\n?[ \t]*<script [^>]*src=[\"']https://static\.cloudflareinsights\.com/beacon\.min\.js[\"'][^>]*></script>")
 
 def main():
     arg = sys.argv[1] if len(sys.argv) > 1 else ""
@@ -23,7 +23,7 @@ def main():
         s = open(path, encoding="utf-8").read()
         s = BEACON_RE.sub("", s)
         if arg != "--remove":
-            tag = '  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "%s"}\'></script>\n' % arg
+            tag = "  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"%s\"}'></script>\n" % arg
             s = s.replace("</body>", tag + "</body>", 1)
         open(path, "w", encoding="utf-8").write(s)
     subprocess.check_call([sys.executable, os.path.join(ROOT, "_i18n", "build_ar.py")])
