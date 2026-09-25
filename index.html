@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
   <title>ZTactique: IT Consulting</title>
-  <meta name="description" content="ZTactique delivers precision IT strategy, cloud infrastructure, and software development for ambitious organizations." />
+  <meta name="description" content="ZTactique delivers IT strategy, cloud infrastructure, software development, sports and football technology, and agentic operating systems for ambitious organizations." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-wrapper">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Primary">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-nav">
         <li><a href="/services/">Services</a></li>
         <li><a href="/insights/">Insights</a></li>
         <li><a href="/about.html">About</a></li>
@@ -28,11 +30,12 @@
     </nav>
   </header>
 
+  <main id="main">
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <div class="hero-tag">IT Consulting &amp; Technology Partners</div>
+        <div class="hero-tag">IT Consulting, Sports Technology &amp; Agentic Systems</div>
         <h1>"Our last vendor ghosted us mid-migration, and now nobody trusts the roadmap."</h1>
         <p class="hero-sub">If that sounds familiar, you do not need another vague promise. What you need is a technology partner who shows up, communicates clearly, and finishes what they start.</p>
         <div class="hero-cta">
@@ -121,6 +124,18 @@
     </div>
   </section>
 
+  <!-- PROOF STRIP -->
+  <section class="feature-strip-band" aria-label="Why ZTactique">
+    <div class="container">
+      <ul class="feature-strip">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><a href="/insights/fdl-performance-case-study.html">A live football site, 70x faster</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Senior consultants only</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Scope and price in writing</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Vendor-neutral advice</span></li>
+      </ul>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section id="services" class="section services">
     <div class="container">
@@ -177,10 +192,23 @@
         </div>
 
       </div>
+      <div class="specialist-grid">
+        <a href="/services/sports-football.html" class="specialist-card">
+          <span class="section-tag">Specialist Focus</span>
+          <h3>Sports and Football</h3>
+          <p>Fan data, member portals, and digital strategy for rights holders, federations, leagues, and clubs.</p>
+          <span class="card-link">See sports and football work →</span>
+        </a>
+        <a href="/services/agentic-operating-system.html" class="specialist-card">
+          <span class="section-tag">New</span>
+          <h3>Agentic Operating System</h3>
+          <p>Coordinated AI agents that run routine operations, with human approval, guardrails, and a full audit trail.</p>
+          <span class="card-link">See how it works →</span>
+        </a>
+      </div>
       <div class="section-footer">
         <a href="/services/" class="btn btn-outline">View All Services</a>
       </div>
-      <p class="sports-link">Working in sports or football? <a href="/services/sports-football.html">See our sports and football work →</a></p>
     </div>
   </section>
 
@@ -232,22 +260,22 @@
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
-          <h4>Discovery Call</h4>
+          <h3 class="sub">Discovery Call</h3>
           <p>A free 30-minute call to understand your challenge, your constraints, and what "done" looks like. There is no sales pitch.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
-          <h4>Scoped Proposal</h4>
+          <h3 class="sub">Scoped Proposal</h3>
           <p>You get a written scope, timeline, and price before any work starts. If it changes, we tell you before it happens, not after.</p>
         </div>
         <div class="step">
           <div class="step-num">03</div>
-          <h4>Kickoff &amp; Delivery</h4>
+          <h3 class="sub">Kickoff &amp; Delivery</h3>
           <p>Only senior consultants are involved, with no hand-offs to juniors, and regular check-ins on a cadence of your choosing.</p>
         </div>
         <div class="step">
           <div class="step-num">04</div>
-          <h4>Handoff &amp; Support</h4>
+          <h3 class="sub">Handoff &amp; Support</h3>
           <p>Clear documentation and a defined support window after delivery, so you're never left guessing what happens next.</p>
         </div>
       </div>
@@ -265,61 +293,32 @@
       <ul class="commit-grid">
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>A free first call, without obligation</h4><p>We start with a 30-minute conversation. You are under no obligation to continue.</p></div>
+          <div><h3 class="sub">A free first call, without obligation</h3><p>We start with a 30-minute conversation. You are under no obligation to continue.</p></div>
         </li>
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>Scope, timeline and price in writing</h4><p>You receive all three before any work starts, so you know what you are agreeing to.</p></div>
+          <div><h3 class="sub">Scope, timeline and price in writing</h3><p>You receive all three before any work starts, so you know what you are agreeing to.</p></div>
         </li>
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>No surprises on changes</h4><p>If the scope needs to change, we tell you before it happens, not after.</p></div>
+          <div><h3 class="sub">No surprises on changes</h3><p>If the scope needs to change, we tell you before it happens, not after.</p></div>
         </li>
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>Senior consultants only</h4><p>The people you meet are the people who do the work, with no hand-offs to juniors.</p></div>
+          <div><h3 class="sub">Senior consultants only</h3><p>The people you meet are the people who do the work, with no hand-offs to juniors.</p></div>
         </li>
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>Documentation and a support window</h4><p>Every engagement ends with clear documentation and a defined period of support, so you are never left dependent on us.</p></div>
+          <div><h3 class="sub">Documentation and a support window</h3><p>Every engagement ends with clear documentation and a defined period of support, so you are never left dependent on us.</p></div>
         </li>
         <li class="commit-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
-          <div><h4>A reply within one business day</h4><p>Every enquiry receives a personal response within that time.</p></div>
+          <div><h3 class="sub">A reply within one business day</h3><p>Every enquiry receives a personal response within that time.</p></div>
         </li>
       </ul>
       <div class="section-footer">
         <a href="/contact.html" class="btn btn-primary">Book a Free Discovery Call</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT / WHY US -->
-  <section id="about" class="section about">
-    <div class="container about-inner">
-      <div class="about-text">
-        <span class="section-tag">Why ZTactique</span>
-        <h2>We Work Like an In-House Team, Without the Overhead</h2>
-        <p>ZTactique was founded on a simple idea: businesses deserve IT partners who are genuinely invested in their outcomes, not only in their invoices.</p>
-        <p>We take the time to understand your business before we recommend any technology. This means fewer wasted projects, faster results, and solutions that truly hold up in production.</p>
-        <a href="/about.html" class="card-link">Read our full story →</a>
-      </div>
-      <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <h4>Deep Expertise</h4>
-          <p>Senior consultants across strategy, infrastructure, and development, with no outsourcing and no hand-offs to juniors.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <h4>Business-First Thinking</h4>
-          <p>Every technical recommendation is evaluated against your goals, budget, and operational constraints.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <h4>Accountable Delivery</h4>
-          <p>Clear timelines, transparent communication, and measurable outcomes from day one.</p>
-        </div>
+        <a href="/about.html" class="btn btn-ghost">Read our story</a>
       </div>
     </div>
   </section>
@@ -408,12 +407,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer">
         <a href="/services/">Services</a>
         <a href="/insights/">Insights</a>
         <a href="/about.html">About</a>

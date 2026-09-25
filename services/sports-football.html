@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
   <title>Sports &amp; Football Technology: ZTactique</title>
   <meta name="description" content="Fan data, digital platforms, and technology strategy for rights holders, federations, leagues, and clubs. Vendor-neutral, senior-led, and backed by a live football project." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,15 +12,16 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-wrapper">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Primary">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-nav">
         <li><a href="/services/">Services</a></li>
         <li><a href="/insights/">Insights</a></li>
         <li><a href="/about.html">About</a></li>
@@ -28,6 +30,7 @@
     </nav>
   </header>
 
+  <main id="main">
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
@@ -82,7 +85,7 @@
       <div class="detail-grid">
 
         <div class="detail-block">
-          <h4>Fan Data and CRM</h4>
+          <h3 class="sub">Fan Data and CRM</h3>
           <ul>
             <li>A 360° view of the fan, with CRM centralized across the organization</li>
             <li>A single source of truth for fan and member data</li>
@@ -92,7 +95,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Digital Platforms</h4>
+          <h3 class="sub">Digital Platforms</h3>
           <ul>
             <li>Member portals for athletes, coaches, and referees</li>
             <li>Single sign-on across the organization's digital properties</li>
@@ -102,7 +105,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Digital Strategy</h4>
+          <h3 class="sub">Digital Strategy</h3>
           <ul>
             <li>A digital assessment of where the organization stands today</li>
             <li>A roadmap that separates quick wins from long-term investment</li>
@@ -112,7 +115,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Cloud and Data Infrastructure</h4>
+          <h3 class="sub">Cloud and Data Infrastructure</h3>
           <ul>
             <li>Cloud-first hosting built to handle matchday traffic peaks</li>
             <li>Data migration with validation at every step</li>
@@ -121,6 +124,55 @@
           </ul>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENTIC OPERATIONS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Agentic Operations</span>
+        <h2>Agents for the Routine Work of a Sports Organization</h2>
+        <p>An agentic operating system coordinates AI agents that handle repetitive tasks, always with a person approving anything sensitive. These are typical starting points for a rights holder, federation, league, or club.</p>
+      </div>
+      <div class="detail-grid">
+
+        <div class="detail-block">
+          <h3 class="sub">Fan Service</h3>
+          <ul>
+            <li>Enquiries triaged across email and social channels, with replies drafted for review</li>
+            <li>Consistent answers drawn from one approved knowledge base</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h3 class="sub">Matchday Operations</h3>
+          <ul>
+            <li>Ticketing, attendance, and incident reports compiled automatically</li>
+            <li>Exceptions flagged early, with a person deciding what to do</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h3 class="sub">Sponsor and Partner Reporting</h3>
+          <ul>
+            <li>Recurring performance packs built from your own data</li>
+            <li>Every figure traceable to its source</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h3 class="sub">Member and Registration Administration</h3>
+          <ul>
+            <li>Records checked for gaps and duplicates before they reach staff</li>
+            <li>Approvals routed to the right person, with a full audit trail</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="section-footer">
+        <a href="/services/agentic-operating-system.html" class="btn btn-outline">How we build agentic operating systems</a>
       </div>
     </div>
   </section>
@@ -177,16 +229,19 @@
         <a href="/services/it-strategy.html">IT Strategy &amp; Consulting →</a>
         <a href="/services/cloud-infrastructure.html">Cloud &amp; Infrastructure →</a>
         <a href="/services/software-development.html">Software Development →</a>
+        <a href="/services/agentic-operating-system.html">Agentic Operating System →</a>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer">
         <a href="/services/">Services</a>
         <a href="/insights/">Insights</a>
         <a href="/about.html">About</a>

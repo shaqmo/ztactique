@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
   <title>Cloud &amp; Infrastructure: ZTactique</title>
   <meta name="description" content="Cloud migration, AWS/Azure/GCP deployments, DevOps pipelines, and infrastructure cost optimization built to grow with your business." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,15 +12,16 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-wrapper">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Primary">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-nav">
         <li><a href="/services/">Services</a></li>
         <li><a href="/insights/">Insights</a></li>
         <li><a href="/about.html">About</a></li>
@@ -28,6 +30,7 @@
     </nav>
   </header>
 
+  <main id="main">
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
@@ -63,7 +66,7 @@
       <div class="detail-grid">
 
         <div class="detail-block">
-          <h4>Cloud Migration &amp; Architecture</h4>
+          <h3 class="sub">Cloud Migration &amp; Architecture</h3>
           <ul>
             <li>Migration planning with a defined rollback path at every stage</li>
             <li>Zero-downtime cutover strategies for production systems</li>
@@ -72,7 +75,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>AWS, Azure &amp; GCP Deployments</h4>
+          <h3 class="sub">AWS, Azure &amp; GCP Deployments</h3>
           <ul>
             <li>Multi-cloud or single-cloud, whichever fits your team's capacity</li>
             <li>Infrastructure as code, so environments are reproducible</li>
@@ -81,7 +84,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>DevOps &amp; CI/CD Pipelines</h4>
+          <h3 class="sub">DevOps &amp; CI/CD Pipelines</h3>
           <ul>
             <li>Automated build, test, and deploy pipelines</li>
             <li>Environment parity between staging and production</li>
@@ -90,7 +93,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Infrastructure Cost Optimization</h4>
+          <h3 class="sub">Infrastructure Cost Optimization</h3>
           <ul>
             <li>Full audit of current spend against actual usage</li>
             <li>Right-sizing and reserved-capacity recommendations</li>
@@ -126,12 +129,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer">
         <a href="/services/">Services</a>
         <a href="/insights/">Insights</a>
         <a href="/about.html">About</a>

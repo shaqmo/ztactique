@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
   <title>IT Strategy &amp; Consulting: ZTactique</title>
   <meta name="description" content="Technology roadmaps, IT audits, vendor selection, and digital transformation advisory for leadership teams who need clarity, not jargon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,15 +12,16 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-wrapper">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Primary">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-nav">
         <li><a href="/services/">Services</a></li>
         <li><a href="/insights/">Insights</a></li>
         <li><a href="/about.html">About</a></li>
@@ -28,6 +30,7 @@
     </nav>
   </header>
 
+  <main id="main">
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
@@ -63,7 +66,7 @@
       <div class="detail-grid">
 
         <div class="detail-block">
-          <h4>Technology Roadmap Development</h4>
+          <h3 class="sub">Technology Roadmap Development</h3>
           <ul>
             <li>12–24 month roadmap tied to business milestones, not just tech trends</li>
             <li>Prioritization framework so you know what to fund first</li>
@@ -72,7 +75,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>IT Audits &amp; Assessments</h4>
+          <h3 class="sub">IT Audits &amp; Assessments</h3>
           <ul>
             <li>Full inventory of current tools, contracts, and technical debt</li>
             <li>Security and compliance gap review</li>
@@ -81,7 +84,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Vendor Evaluation &amp; Selection</h4>
+          <h3 class="sub">Vendor Evaluation &amp; Selection</h3>
           <ul>
             <li>Vendor-neutral shortlisting, as we do not accept referral fees</li>
             <li>RFP support and scoring rubrics</li>
@@ -90,7 +93,7 @@
         </div>
 
         <div class="detail-block">
-          <h4>Digital Transformation Advisory</h4>
+          <h3 class="sub">Digital Transformation Advisory</h3>
           <ul>
             <li>Change management planning alongside the technical plan</li>
             <li>Phased rollout design to limit business disruption</li>
@@ -126,12 +129,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <a href="/" class="nav-logo">Z<span>Tactique</span></a>
       <p class="footer-copy">&copy; 2026 ZTactique. All rights reserved.</p>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer">
         <a href="/services/">Services</a>
         <a href="/insights/">Insights</a>
         <a href="/about.html">About</a>
