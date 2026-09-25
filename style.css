@@ -1088,3 +1088,6 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 @media (max-width: 900px) {
   .specialist-grid { grid-template-columns: 1fr; }
 }
+
+/* keep anchored targets clear of the sticky header */
+#main, section[id] { scroll-margin-top: 68px; }
