@@ -1132,3 +1132,25 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 @media (max-width: 640px) {
   .start-guide li { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+/* ===== ABOUT PAGE ===== */
+.stats--3 { grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto; }
+
+.stat-link {
+  display: block;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+.stat-link:hover { background: rgba(255,255,255,0.6); }
+.stat-link .stat-label { max-width: 24ch; margin: 6px auto 0; }
+
+.tool-chips a { color: inherit; text-decoration: none; }
+.tool-chips li:has(a) { padding: 0; transition: border-color var(--transition); }
+.tool-chips li:has(a):hover { border-color: var(--navy-light); }
+.tool-chips li a { display: block; padding: 10px 20px; }
+
+@media (max-width: 640px) {
+  .stats--3 { grid-template-columns: 1fr; gap: 20px; }
+}
