@@ -20,3 +20,8 @@ refuses to leave it silent. `python3 _i18n/build_ar.py --missing` only reports.
 
 Needs: `python3 -m pip install --user beautifulsoup4`.
 After changing `style.css` or `script.js`, bump the `?v=` on the asset links.
+
+## Analytics
+`python3 _i18n/add_analytics.py <token>` adds the Cloudflare Web Analytics beacon
+to every page (English pages, then the Arabic pages are rebuilt from them).
+`--remove` takes it off. Run it again with a new token to replace the old one.
