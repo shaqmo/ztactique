@@ -17,6 +17,12 @@
   --shadow: 0 1px 3px rgba(48,56,65,0.08), 0 4px 16px rgba(48,56,65,0.06);
   --shadow-hover: 0 4px 12px rgba(48,56,65,0.12), 0 12px 32px rgba(48,56,65,0.1);
   --transition: 0.2s ease;
+
+  /* Section rhythm: tight for related content, loose for key moments */
+  --space-tight: 56px;
+  --space-base: 72px;
+  --space-loose: 104px;
+  --header-gap: 44px;
 }
 
 html { scroll-behavior: smooth; }
@@ -38,7 +44,7 @@ body {
 }
 
 .section {
-  padding: 96px 0;
+  padding: var(--section-pad, var(--space-base)) 0;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -61,7 +67,7 @@ p { color: var(--text-muted); }
 .section-header {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 60px;
+  margin: 0 auto var(--header-gap);
 }
 
 .section-header h2 { margin-bottom: 16px; }
@@ -179,7 +185,7 @@ p { color: var(--text-muted); }
 
 /* ===== HERO ===== */
 .hero {
-  padding: 96px 0 80px;
+  padding: 88px 0 72px;
   background: linear-gradient(160deg, #EBEBEB 0%, #F5F5F5 60%);
   border-bottom: 1px solid var(--border);
 }
@@ -226,13 +232,27 @@ p { color: var(--text-muted); }
 }
 
 .hero h1 { margin-bottom: 20px; }
+.hero h1 .h1-light { font-weight: 400; color: var(--text-muted); }
 
 .hero-sub {
   font-size: 1.15rem;
   color: var(--text-muted);
   max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
+
+.hero-credo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 32px;
+}
+.hero-credo b { color: var(--accent); font-weight: 700; }
 
 .hero-cta {
   display: flex;
@@ -322,7 +342,7 @@ p { color: var(--text-muted); }
 .section-footer {
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 /* Card as a link wrapper (insight cards) */
@@ -398,16 +418,11 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 0 40px;
   counter-reset: none;
 }
 
-.method-step {
-  padding: 8px 28px 8px 0;
-  margin-right: 28px;
-  border-right: 1px solid rgba(255,255,255,0.14);
-}
-.method-step:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.method-step { position: relative; padding: 8px 0; }
 
 .method-num {
   display: inline-flex;
@@ -550,7 +565,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -589,7 +604,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 .contact-inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -937,7 +952,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
   .about-inner,
   .contact-inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
   .hero-inner {
@@ -947,6 +962,7 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 
   .hero-copy { max-width: 100%; margin: 0 auto; }
   .hero-cta { justify-content: center; }
+  .hero-credo { justify-content: center; }
   .hero-visual { order: -1; max-width: 280px; }
 
   .steps {
@@ -956,7 +972,6 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
   .commit-grid { grid-template-columns: repeat(2, 1fr); }
 
   .method-steps { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
-  .method-step:nth-child(2) { border-right: none; margin-right: 0; }
   .feature-strip { grid-template-columns: repeat(2, 1fr); }
 
   .detail-grid,
@@ -974,8 +989,8 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 64px 0; }
-  .hero { padding: 64px 0 56px; }
+  :root { --space-tight: 44px; --space-base: 56px; --space-loose: 72px; --header-gap: 32px; }
+  .hero { padding: 56px 0 48px; }
 
   .nav-links {
     display: none;
@@ -1014,7 +1029,6 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
   .steps { grid-template-columns: 1fr; }
   .commit-grid { grid-template-columns: 1fr; }
   .method-steps { grid-template-columns: 1fr; }
-  .method-step { border-right: none; margin-right: 0; padding-right: 0; }
   .feature-strip { grid-template-columns: 1fr; gap: 12px; }
 
   .stats { grid-template-columns: 1fr 1fr; }
@@ -1156,6 +1170,103 @@ a.card .card-link { margin-top: auto; padding-top: 20px; }
 }
 
 
+/* ===== SPORTS-TECH CROSSOVER ===== */
+
+/* Section rhythm: tight for related content, loose around key moments */
+.services, .commitments, .insights-preview { --section-pad: var(--space-base); }
+.how-it-works { --section-pad: var(--space-tight); }
+.method, .contact, .cta-band { --section-pad: var(--space-loose); }
+
+/* Match-sheet numbering on the homepage section tags */
+.home main { counter-reset: sec; }
+.home .section-header .section-tag,
+.home .contact-text > .section-tag { counter-increment: sec; }
+.home .section-header .section-tag::before,
+.home .contact-text > .section-tag::before {
+  content: counter(sec, decimal-leading-zero);
+  margin-inline-end: 10px;
+  padding-inline-end: 10px;
+  border-inline-end: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Method: a single pipeline line runs behind the numbered nodes */
+.method-steps { position: relative; }
+.method-steps::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  inset-inline-start: 15px;
+  inset-inline-end: 15px;
+  border-top: 1.5px dashed rgba(255,255,255,0.28);
+  pointer-events: none;
+}
+.method-steps::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 6px;
+  width: 9px;
+  height: 9px;
+  border-top: 1.5px solid rgba(255,255,255,0.5);
+  border-right: 1.5px solid rgba(255,255,255,0.5);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+html[dir="rtl"] .method-steps::after { transform: rotate(-135deg); }
+.method-num { position: relative; z-index: 1; background: var(--navy); }
+
+/* Proof strip reads like a scoreboard */
+.feature-strip { gap: 0; }
+.feature-strip li { padding: 0 20px; }
+.feature-strip li:first-child { padding-inline-start: 0; }
+.feature-strip li + li { border-inline-start: 1px solid var(--border); }
+
+/* How we work: shirt-number step markers */
+.step-num {
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sports focus: the specialist card as a plain highlight panel */
+.specialist-card { padding: 40px 44px; }
+.specialist-card > * { max-width: 460px; }
+
+/* Cards: a touchline draws across the top on hover */
+.card { position: relative; overflow: hidden; }
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+html[dir="rtl"] .card::before { transform-origin: right; }
+.card:hover::before { transform: scaleX(1); }
+
+@media (max-width: 900px) {
+  .method-steps::before, .method-steps::after { display: none; }
+  .feature-strip { gap: 12px 24px; }
+  .feature-strip li,
+  .feature-strip li:first-child { padding: 0; }
+  .feature-strip li + li { border-inline-start: 0; }
+}
+@media (max-width: 640px) {
+  .specialist-card { padding: 32px 28px; }
+  .feature-strip { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card::before { transition: none; }
+}
+
+
 /* ===== ARABIC (RTL) ===== */
 html[lang="ar"] body {
   font-family: 'IBM Plex Sans Arabic', 'Roboto', system-ui, -apple-system, sans-serif;
@@ -1190,14 +1301,5 @@ html[dir="rtl"] .next-steps { padding-left: 0; padding-right: 20px; }
 html[dir="rtl"] .article-body ul,
 html[dir="rtl"] .article-body ol { padding-left: 0; padding-right: 22px; }
 
-html[dir="rtl"] .method-step { padding: 8px 0 8px 28px; margin-right: 0; margin-left: 28px; border-right: 0; border-left: 1px solid rgba(255,255,255,0.14); }
-html[dir="rtl"] .method-step:last-child { border-left: 0; margin-left: 0; padding-left: 0; }
-
 html[dir="rtl"] .skip-link { left: auto; right: 16px; }
 
-@media (max-width: 900px) {
-  html[dir="rtl"] .method-step:nth-child(2) { border-left: 0; margin-left: 0; }
-}
-@media (max-width: 640px) {
-  html[dir="rtl"] .method-step { border-left: 0; margin-left: 0; padding-left: 0; }
-}
