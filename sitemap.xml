@@ -49,6 +49,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/agentic-operating-system.html"/>
   </url>
   <url>
+    <loc>https://ztactique.com/services/ai-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/ai-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/ai-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/ai-governance.html"/>
+  </url>
+  <url>
+    <loc>https://ztactique.com/ar/services/ai-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/ai-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/ai-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/ai-governance.html"/>
+  </url>
+  <url>
     <loc>https://ztactique.com/services/cloud-infrastructure.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/cloud-infrastructure.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/cloud-infrastructure.html"/>
@@ -59,6 +71,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/cloud-infrastructure.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/cloud-infrastructure.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/cloud-infrastructure.html"/>
+  </url>
+  <url>
+    <loc>https://ztactique.com/services/data-ai-readiness.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/data-ai-readiness.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/data-ai-readiness.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/data-ai-readiness.html"/>
+  </url>
+  <url>
+    <loc>https://ztactique.com/ar/services/data-ai-readiness.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ztactique.com/services/data-ai-readiness.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ztactique.com/ar/services/data-ai-readiness.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ztactique.com/services/data-ai-readiness.html"/>
   </url>
   <url>
     <loc>https://ztactique.com/services/</loc>

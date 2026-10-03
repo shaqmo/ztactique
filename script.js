@@ -64,6 +64,27 @@ if (window.rive) {
   });
 }
 
+// Reading progress bar (article pages only)
+var articleEl = document.querySelector('.article-body');
+if (articleEl) {
+  var bar = document.createElement('div');
+  bar.className = 'read-progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  var ticking = false;
+  var updateBar = function () {
+    var r = articleEl.getBoundingClientRect();
+    var total = r.height - window.innerHeight * 0.6;
+    var done = Math.min(Math.max(-r.top + window.innerHeight * 0.2, 0), Math.max(total, 1));
+    bar.style.transform = 'scaleX(' + (total > 0 ? done / total : 1) + ')';
+    ticking = false;
+  };
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
+  }, { passive: true });
+  updateBar();
+}
+
 // Mobile nav toggle
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');

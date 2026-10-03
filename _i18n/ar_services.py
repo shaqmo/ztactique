@@ -263,4 +263,145 @@ STR = {
     "Which Workflow Would You Start With?": "بأي مسار عمل ستبدأ؟",
     "Start with a free 30-minute discovery call. There is no sales pitch, only a conversation about where agents could help and where they should not.":
         "ابدأ بمكالمة استكشافية مجانية مدتها 30 دقيقة. لا ترويج للمبيعات، بل حديث عن المواضع التي قد يفيد فيها الوكلاء وتلك التي لا ينبغي استخدامهم فيها.",
+
+    # ---- data platforms, AI governance, audit (added) ----
+    # ---- shared / homepage / overview ----
+    "Data Platforms & AI Readiness": "منصات البيانات والجاهزية للذكاء الاصطناعي",
+    "Data Platforms & AI Readiness →": "منصات البيانات والجاهزية للذكاء الاصطناعي ←",
+    "AI Governance & Evaluation": "حوكمة الذكاء الاصطناعي وتقييمه",
+    "AI Governance & Evaluation →": "حوكمة الذكاء الاصطناعي وتقييمه ←",
+    "AI Readiness Audit": "تدقيق الجاهزية للذكاء الاصطناعي",
+    "Fixed-Scope Starting Point": "نقطة بداية محدّدة النطاق",
+    "See what the audit covers →": "اطّلع على ما يشمله التدقيق ←",
+    "Find out whether your data and processes are ready for AI. Scope, timeline, and price are agreed in writing before work starts.":
+        "اعرف ما إذا كانت بياناتك وعملياتك جاهزة للذكاء الاصطناعي. يُتَّفق كتابةً على النطاق والجدول الزمني والسعر قبل بدء العمل.",
+    "AI is only as reliable as your data. We build governed data foundations, and start with a fixed-scope readiness audit so you know where you stand before you invest.":
+        "موثوقية الذكاء الاصطناعي من موثوقية بياناتك. نبني أسسًا للبيانات خاضعة للحوكمة، ونبدأ بتدقيق جاهزية محدّد النطاق لتعرف موقعك قبل أن تستثمر.",
+    "AI readiness audit, fixed scope and price": "تدقيق الجاهزية للذكاء الاصطناعي بنطاق وسعر ثابتين",
+    "Lakehouse and warehouse design": "تصميم مستودعات البيانات والبحيرات المتكاملة",
+    "Pipelines and data quality checks": "خطوط البيانات وفحوصات جودتها",
+    "Data governance and lineage": "حوكمة البيانات وتتبّع مصدرها",
+    "We help you show that AI is under control: practical policy, testing before launch, human oversight, and an audit trail you can hand to a reviewer.":
+        "نساعدك على إثبات أن الذكاء الاصطناعي تحت السيطرة: سياسة عملية، واختبار قبل الإطلاق، ورقابة بشرية، وسجل تدقيق يمكنك تسليمه لأي مراجع.",
+    "AI inventory, policy, and risk review": "جرد الذكاء الاصطناعي وسياسته ومراجعة مخاطره",
+    "Evaluation and regression testing": "التقييم واختبارات الانحدار",
+    "Guardrails and human approval steps": "ضوابط الحماية وخطوات الموافقة البشرية",
+    "Monitoring and audit trail": "المراقبة وسجل التدقيق",
+    "Fan data platforms, member portals, and digital strategy for rights holders, federations, leagues, and clubs.":
+        "منصات بيانات الجماهير وبوابات الأعضاء والاستراتيجية الرقمية لأصحاب الحقوق والاتحادات والدوريات والأندية.",
+    "Fan data platforms, member portals, agentic operations, and digital strategy for rights holders, federations, leagues, and clubs. Backed by a live football project you can inspect.":
+        "منصات بيانات الجماهير وبوابات الأعضاء والعمليات المدعومة بالوكلاء الأذكياء والاستراتيجية الرقمية لأصحاب الحقوق والاتحادات والدوريات والأندية، مدعومة بمشروع كرة قدم حيّ يمكنك فحصه.",
+    "ZTactique delivers IT strategy, cloud infrastructure, software development, data platforms, AI governance, sports and football technology, and agentic operating systems for ambitious organizations.":
+        "تقدّم ZTactique خدمات استراتيجية تقنية المعلومات والبنية السحابية وتطوير البرمجيات ومنصات البيانات وحوكمة الذكاء الاصطناعي وتقنيات الرياضة وكرة القدم وأنظمة تشغيل الوكلاء الأذكياء للمؤسسات الطموحة.",
+    "IT strategy, cloud, software development, data platforms, agentic development, AI governance, and sports technology services from ZTactique: scoped, senior-led, and built around your business goals.":
+        "خدمات ZTactique في استراتيجية تقنية المعلومات والحوسبة السحابية وتطوير البرمجيات ومنصات البيانات وتطوير الوكلاء الأذكياء وحوكمة الذكاء الاصطناعي وتقنيات الرياضة: محدّدة النطاق، بقيادة استشاريين كبار، ومبنية حول أهداف عملك.",
+    "Six core services and one specialist focus. Choose a starting point below, or book a call and we will help you decide where to begin.":
+        "ست خدمات أساسية وتخصص متقدّم واحد. اختر نقطة البداية أدناه، أو احجز مكالمة لنساعدك على تحديد مكان البدء.",
+    "We want to use AI, but we are not sure our data is ready.": "نريد استخدام الذكاء الاصطناعي، لكننا لسنا متأكدين من جاهزية بياناتنا.",
+    "We need to show that our AI is under control.": "نحتاج إلى إثبات أن الذكاء الاصطناعي لدينا تحت السيطرة.",
+    "Seven Areas, One Way of Working": "سبعة مجالات، أسلوب عمل واحد",
+    "A fan data platform that unifies ticketing, app, web, and CRM data, ready for analytics and AI":
+        "منصة بيانات للجماهير توحّد بيانات التذاكر والتطبيق والموقع وإدارة العلاقات، وجاهزة للتحليلات والذكاء الاصطناعي",
+
+    # ---- data platforms & AI readiness page ----
+    "Data Platforms & AI Readiness: ZTactique": "منصات البيانات والجاهزية للذكاء الاصطناعي: ZTactique",
+    "Governed data platforms and a fixed-scope AI readiness audit, so your AI projects start from data you can trust.":
+        "منصات بيانات خاضعة للحوكمة وتدقيق جاهزية للذكاء الاصطناعي محدّد النطاق، لتبدأ مشاريعك من بيانات يمكنك الوثوق بها.",
+    "Data & AI Readiness": "البيانات والجاهزية للذكاء الاصطناعي",
+    "\"We want to use AI, but our data is scattered, inconsistent, and nobody owns it.\"":
+        "«نريد استخدام الذكاء الاصطناعي، لكن بياناتنا مبعثرة وغير متسقة ولا يملكها أحد».",
+    "AI is only as reliable as the data beneath it. We assess where your data stands, then build the governed foundation that analytics, dashboards, and AI agents can safely rely on. We start with a fixed-scope audit, so you know exactly what you are buying.":
+        "موثوقية الذكاء الاصطناعي من موثوقية البيانات التي تقوم عليها. نقيّم وضع بياناتك، ثم نبني الأساس الخاضع للحوكمة الذي تعتمد عليه التحليلات ولوحات المتابعة ووكلاء الذكاء الاصطناعي بأمان. نبدأ بتدقيق محدّد النطاق، لتعرف تمامًا ما الذي تشتريه.",
+    "See the audit": "اطّلع على التدقيق",
+    "Fixed-scope audit": "تدقيق محدّد النطاق",
+    "Vendor-neutral platform advice": "مشورة محايدة في اختيار المنصات",
+    "Governed, documented data": "بيانات خاضعة للحوكمة وموثّقة",
+    "A Foundation AI Can Rely On": "أساس يمكن للذكاء الاصطناعي الاعتماد عليه",
+    "Dashboards, assistants, and agents are only as trustworthy as the data under them. We build that layer deliberately and document it.":
+        "لا تزيد موثوقية لوحات المتابعة والمساعدين والوكلاء على موثوقية البيانات التي تقوم عليها. نبني تلك الطبقة بعناية ونوثّقها.",
+    "Data Platform Design": "تصميم منصة البيانات",
+    "Lakehouse or warehouse architecture chosen for your volume, skills, and budget": "بنية مستودع بيانات أو بحيرة متكاملة تُختار وفق حجم بياناتك ومهارات فريقك وميزانيتك",
+    "Open table formats, so your data is not locked into one vendor": "صيغ جداول مفتوحة، فلا تُحتجز بياناتك لدى مورّد واحد",
+    "Clear layers from raw data to trusted, business-ready datasets": "طبقات واضحة من البيانات الخام إلى مجموعات بيانات موثوقة وجاهزة للعمل",
+    "Pipelines & Integration": "خطوط البيانات والتكامل",
+    "Ingestion from your operational systems, files, and APIs": "استيعاب البيانات من أنظمتك التشغيلية وملفاتك وواجهات API",
+    "Batch and near-real-time pipelines where the use case needs them": "خطوط معالجة دفعية وشبه فورية حيث تتطلبها حالة الاستخدام",
+    "Automated checks that catch bad data before people see it": "فحوصات آلية تكتشف البيانات الرديئة قبل أن يراها الناس",
+    "Governance & Data Quality": "الحوكمة وجودة البيانات",
+    "Data ownership, definitions, and access rules agreed in writing": "ملكية البيانات وتعريفاتها وقواعد الوصول إليها متفق عليها كتابةً",
+    "Data contracts between the teams that produce and use data": "عقود بيانات بين الفرق التي تنتج البيانات والفرق التي تستخدمها",
+    "Lineage, so every figure can be traced to its source": "تتبّع المصدر، ليمكن ردّ كل رقم إلى أصله",
+    "Analytics & AI Enablement": "تمكين التحليلات والذكاء الاصطناعي",
+    "Semantic models and dashboards that leadership can trust": "نماذج دلالية ولوحات متابعة تثق بها القيادة",
+    "Data prepared and permissioned for search, assistants, and agents": "بيانات مهيّأة ومضبوطة الصلاحيات للبحث والمساعدين والوكلاء",
+    "A handover pack, so your team can run it without us": "حزمة تسليم ليتمكن فريقك من تشغيلها من دوننا",
+    "Start Here": "ابدأ من هنا",
+    "The AI Readiness Audit": "تدقيق الجاهزية للذكاء الاصطناعي",
+    "A fixed-scope assessment, with the scope, timeline, and price agreed in writing before work starts. You receive findings you can act on, whether or not you hire us for the next step.":
+        "تقييم محدّد النطاق، يُتَّفق كتابةً على نطاقه وجدوله الزمني وسعره قبل بدء العمل. تتلقى نتائج يمكنك العمل بها، سواء كلّفتنا بالخطوة التالية أم لا.",
+    "Discover": "الاستكشاف",
+    "Assess": "التقييم",
+    "Prioritize": "تحديد الأولويات",
+    "Report": "التقرير",
+    "We speak with the people who own your key processes and systems, and list the AI use cases they actually want.":
+        "نتحدث مع من يملكون عملياتك وأنظمتك الرئيسية، ونحصر حالات استخدام الذكاء الاصطناعي التي يريدونها فعلًا.",
+    "We review data quality, access, ownership, and security against each use case, using your real data.":
+        "نراجع جودة البيانات والوصول والملكية والأمن لكل حالة استخدام، بالاعتماد على بياناتك الفعلية.",
+    "We rank use cases by value, effort, and risk, and say plainly which ones are not ready yet.":
+        "نرتّب حالات الاستخدام بحسب القيمة والجهد والمخاطر، ونقول بوضوح أيّها غير جاهزة بعد.",
+    "You get a written report and a sequenced roadmap in plain language, with no jargon padding.":
+        "تحصل على تقرير مكتوب وخارطة طريق مرتّبة زمنيًا بلغة واضحة دون حشو بالمصطلحات.",
+    "Use-case shortlist": "قائمة مختصرة بحالات الاستخدام",
+    "Data readiness findings": "نتائج جاهزية البيانات",
+    "Risk and governance gaps": "فجوات المخاطر والحوكمة",
+    "Sequenced roadmap": "خارطة طريق مرتّبة زمنيًا",
+    "Request an AI Readiness Audit": "اطلب تدقيق الجاهزية للذكاء الاصطناعي",
+    "Not Sure Your Data Is Ready?": "لست متأكدًا من جاهزية بياناتك؟",
+    "A 30-minute call is enough for us to tell you honestly whether an audit is the right first step.":
+        "تكفي مكالمة مدتها 30 دقيقة لنخبرك بصدق إن كان التدقيق هو الخطوة الأولى المناسبة.",
+
+    # ---- AI governance & evaluation page ----
+    "AI Governance & Evaluation: ZTactique": "حوكمة الذكاء الاصطناعي وتقييمه: ZTactique",
+    "AI policy, risk review, evaluation, guardrails, and monitoring, so the AI systems in your organization are controlled, measured, and auditable.":
+        "سياسة الذكاء الاصطناعي ومراجعة المخاطر والتقييم وضوابط الحماية والمراقبة، لتكون أنظمة الذكاء الاصطناعي في مؤسستك خاضعة للسيطرة وقابلة للقياس والتدقيق.",
+    "AI Governance": "حوكمة الذكاء الاصطناعي",
+    "\"Teams are already using AI, and nobody can show me how it is controlled.\"":
+        "«الفرق تستخدم الذكاء الاصطناعي فعلًا، ولا أحد يستطيع أن يريني كيف تتم السيطرة عليه».",
+    "Boards, regulators, and customers now ask for evidence that AI is under control. We help you set practical rules, test AI systems before and after launch, and keep a record that stands up to scrutiny.":
+        "يطلب مجالس الإدارة والجهات التنظيمية والعملاء اليوم دليلًا على أن الذكاء الاصطناعي تحت السيطرة. نساعدك على وضع قواعد عملية، واختبار أنظمة الذكاء الاصطناعي قبل الإطلاق وبعده، والاحتفاظ بسجل يصمد أمام التدقيق.",
+    "Practical, not bureaucratic": "عملي لا بيروقراطي",
+    "Works for any AI system": "يصلح لأي نظام ذكاء اصطناعي",
+    "Evidence you can show": "أدلة يمكنك إظهارها",
+    "Control You Can Show, Not Just Claim": "سيطرة يمكنك إثباتها لا الادعاء بها فقط",
+    "Governance that is short enough to follow and specific enough to audit. It works for AI systems we built and for ones you bought.":
+        "حوكمة موجزة بما يكفي لاتباعها ومحدّدة بما يكفي لتدقيقها. تصلح للأنظمة التي بنيناها وتلك التي اشتريتها.",
+    "AI Policy & Risk": "سياسة الذكاء الاصطناعي والمخاطر",
+    "An inventory of where AI is already used in your organization": "جرد للمواضع التي يُستخدم فيها الذكاء الاصطناعي فعلًا في مؤسستك",
+    "A short, usable AI policy that staff will actually follow": "سياسة موجزة وقابلة للتطبيق للذكاء الاصطناعي يلتزم بها الموظفون فعلًا",
+    "Risk classification by use case, with named owners": "تصنيف المخاطر بحسب حالة الاستخدام، مع تسمية المسؤولين",
+    "Evaluation & Testing": "التقييم والاختبار",
+    "Test sets built from your real tasks and edge cases": "مجموعات اختبار مبنية من مهامك الفعلية وحالاتك الحدّية",
+    "Quality, accuracy, and safety measured before launch": "قياس الجودة والدقة والسلامة قبل الإطلاق",
+    "Regression checks whenever a model or prompt changes": "فحوصات انحدار كلما تغيّر نموذج أو تعليمات",
+    "Guardrails & Human Oversight": "ضوابط الحماية والرقابة البشرية",
+    "Approval steps for sensitive or irreversible actions": "خطوات موافقة للإجراءات الحساسة أو التي لا رجعة فيها",
+    "Access limited to the data and tools each system needs": "تقييد الوصول بالبيانات والأدوات التي يحتاجها كل نظام فقط",
+    "Clear escalation to a person when the system is unsure": "تصعيد واضح إلى شخص حين لا يكون النظام متأكدًا",
+    "Monitoring & Audit": "المراقبة والتدقيق",
+    "Logging of inputs, outputs, and decisions": "تسجيل المدخلات والمخرجات والقرارات",
+    "Error, drift, and cost monitoring with alert thresholds": "مراقبة الأخطاء والانحراف والتكلفة مع حدود للتنبيه",
+    "An audit trail ready for internal review or an external auditor": "سجل تدقيق جاهز للمراجعة الداخلية أو لمدقق خارجي",
+    "Regulatory Readiness": "الجاهزية التنظيمية",
+    "Know Which Rules Apply to You": "اعرف القواعد التي تنطبق عليك",
+    "AI regulation is arriving unevenly across regions. We map your use cases against the rules that apply to you and flag what needs action.":
+        "تصل تنظيمات الذكاء الاصطناعي بوتيرة متفاوتة بين المناطق. نطابق حالات استخدامك مع القواعد التي تنطبق عليك ونحدّد ما يتطلب إجراءً.",
+    "Data-protection law": "قوانين حماية البيانات",
+    "EU AI Act, where relevant": "قانون الذكاء الاصطناعي الأوروبي، حيثما انطبق",
+    "Sector rules": "القواعد القطاعية",
+    "Customer and procurement requirements": "متطلبات العملاء والمشتريات",
+    "We provide technical and operational readiness work. We do not provide legal advice.":
+        "نقدّم عمل جاهزية تقنيًا وتشغيليًا، ولا نقدّم استشارات قانونية.",
+    "Need to Show That Your AI Is Under Control?": "هل تحتاج إلى إثبات أن الذكاء الاصطناعي لديك تحت السيطرة؟",
+    "A 30-minute call is enough for us to tell you honestly where your biggest gaps are likely to be.":
+        "تكفي مكالمة مدتها 30 دقيقة لنخبرك بصدق أين يُرجَّح أن تكون أكبر فجواتك.",
 }

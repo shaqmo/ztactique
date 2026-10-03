@@ -54,4 +54,6 @@ STR = {
     "Contact: ZTactique": "اتصل بنا: ZTactique",
     "Get in touch with ZTactique to talk through an IT strategy, cloud migration, or software development challenge.":
         "تواصل مع ZTactique لمناقشة تحدٍّ في استراتيجية تقنية المعلومات أو الترحيل إلى السحابة أو تطوير البرمجيات.",
+    "Keep Reading": "تابع القراءة",
+    "More Insights": "المزيد من الرؤى",
 }

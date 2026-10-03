@@ -3,8 +3,8 @@
 STR = {
     # ---- insights index ----
     "Insights: ZTactique": "رؤى: ZTactique",
-    "Practical notes on IT strategy, cloud infrastructure, and software delivery from ZTactique, without gated whitepapers and without filler.":
-        "ملاحظات عملية من ZTactique حول استراتيجية تقنية المعلومات والبنية السحابية وتسليم البرمجيات، دون أوراق بيضاء مقيّدة ودون حشو.",
+    "Case studies and practical notes on IT strategy, data, AI, and software delivery from ZTactique.":
+        "دراسات حالة وملاحظات عملية في استراتيجية تقنية المعلومات والبيانات والذكاء الاصطناعي وتسليم البرمجيات من ZTactique.",
     "Articles and case studies": "مقالات ودراسات حالة",
     "Have a Challenge That Isn't Covered Here?": "هل لديك تحدٍّ لم نتناوله هنا؟",
     "These are a few of the situations we see most. Yours is probably one we've handled before, too.":

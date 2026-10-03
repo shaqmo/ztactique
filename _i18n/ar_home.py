@@ -97,9 +97,8 @@ STR = {
     "Every enquiry receives a personal response within that time.":
         "يتلقى كل استفسار ردًّا شخصيًّا خلال هذه المدة.",
 
-    "Honest Notes on IT, Not Marketing Copy": "ملاحظات صريحة عن تقنية المعلومات، لا نصوصًا تسويقية",
-    "Practical notes from real engagements, without gated whitepapers and without filler.":
-        "ملاحظات عملية من مشاريع حقيقية، دون أوراق بيضاء مقيّدة ودون حشو.",
+    "Insights from Our Work": "رؤى من أعمالنا",
+    "Case studies and practical notes on IT, data, and AI.": "دراسات حالة وملاحظات عملية في تقنية المعلومات والبيانات والذكاء الاصطناعي.",
     "How We Built a Sports League Website 70x Faster Than the Official One": "كيف بنينا موقع دوري رياضي أسرع بـ 70 مرة من الموقع الرسمي",
     "A public, verifiable case study in lean infrastructure and evidence-backed engineering. You can see the live result yourself.":
         "دراسة حالة علنية يمكن التحقق منها في البنية التحتية الرشيقة والهندسة المبنية على الأدلة. يمكنك مشاهدة النتيجة الحيّة بنفسك.",
